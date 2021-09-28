@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
+import Link from 'next/link';
 import Header from '../components/Header';
 import transitionImage from '../../public/transition.png';
 import arrowImage from '../../public/connect/connect_arrow.svg';

@@ -28,7 +28,7 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <div className="pl-16 xl:pl-48 h-full">
-          <div className="font-semibold text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl pt-10 lg:pt-20">
+          <div className="font-bold text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl pt-10 lg:pt-20">
             <div>
               <div className="flex items-start">
                 <h1 className="">BVS&#160;</h1>

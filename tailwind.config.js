@@ -3,9 +3,6 @@ module.exports = {
   purge: ['./src/**/*.{js,ts,jsx,tsx}', './public/**/*.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    // fontFamily: {
-    //   sans: ['Montserrat', 'sans-serif']
-    // },
     keyframes: {
       'fade-in-up': {
         '0%': {
@@ -154,7 +151,10 @@ module.exports = {
         "takeNotice": "url('/background/take-notice.png')",
         "beActive": "url('/background/be-active.png')",
         "connect": "url('/background/connect.png')",
-      })
+      }),
+      fontFamily: {
+        'montserrat': ['"Montserrat"', 'sans-serif']
+      },
     },
 
   },

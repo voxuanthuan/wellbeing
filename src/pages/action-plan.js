@@ -43,7 +43,7 @@ export default function ActionPlan() {
                             <div className="flex  mb-16">
                                 <div className="max-w-[360px] h-[110px] relative">
                                     <div className="flex items-center">
-                                        <Link href="connect">
+                                        <Link href="/connect">
                                             <div className="w-[55px] h-[55px]">
                                                 <button>
                                                     <Image src={connectIcon}/>
