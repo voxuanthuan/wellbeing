@@ -38,7 +38,7 @@
     "question15": "Notice and enjoy your surroundings?",
 
     "introDetail": "Here are some simple things to do everyday that can help you to feel <span class='text-bvsPeach'>happier</span> and more <span class='text-bvsPeach'>positive...</span>",
-    "beactiveDetail": "Getting active can make you feel good and keep you healthy.",
+    "beactiveDetail": "Getting <span class='text-bvsTeal'>active</span> can make you feel <span class='text-bvsTeal'>good</span> and keep you <span class='text-bvsTeal'>healthy.</span>",
     "keepLeaningDetail": "Learning isn’t just for school. Study something <span class='text-bvsBrightYellow'>new</span> or try something <span class='text-bvsBrightYellow'>different.</span>",
     "giveDetail": "<span class='text-bvsPeach'>Giving</span> to other people makes both them and you feel special but it’s <span class='text-bvsPeach'>not just about presents.</span>",
     "takeNoticeDetail": "Taking notice means <span class='text-bvsDrakTeal'>understanding</span> feelings, <span class='text-bvsDrakTeal'>watching</span> the world you and <span class='text-bvsDrakTeal'>enjoying</span> life.",
@@ -111,9 +111,10 @@
     "clickToActionPlan": "Click here for your personalized action plan",
     "actionPlanButotn": "action plan",
 
-    "wellbeingActionPlay": "Wellbeing Action plan",
+    "wellbeingActionPlan": "Wellbeing Action plan",
     "topTip": "Wellbeing Buddy’s top tip:",
-    "topTipContent": "Thấu hiểu “Tầm quan trọng của sức khỏe tinh thần’ và ‘Những giải pháp hữu ích trong tầm tay” sẽ giúp sức khỏe tinh thần cải thiện hiệu quả!",
+    "topTipContent": "The best way to really improve wellbeing is through understanding that",
+    "importantThing": "“Wellbeing is important for me and ‘There are things that I can do to improve my wellbeing”",
     "backToReport": "Back to Wellbeing Report",
     "needHelp": "Need help?",
     "connectGuide": "You are a connect champion, keep doing what you are doing",
@@ -121,5 +122,16 @@
     "keepLearningGuide": "Well done for trying to do some learning outside school but you could do a bit more.  Press the button for some great ideas!",
     "givingGuide": "Giving is really important for our wellbeing.  Press the button and try some of the ideas now.",
     "takeNoticeGuide": "You are a champion at taking note, keep doing what you are doing!",
-    "learnMore": "Learn more"
+    "learnMore": "Learn more",
+
+    "aboutWellbeing": "about wellbeing",
+    "wellbeingMean": "Wellbeing is about feeling good both mentally and physically.  There are 5 things we can all do to really help our wellbeing",
+    "takeQuiz": "take quiz",
+    "hintWellbeing": "So how good is you Wellbeing?  Click here to do Wellbeing Buddies’s checkup",
+
+    "weAre": "We are",
+    "areFriend": "BVIS WellBeing",
+    "wellbeingBVSI": "Buddies",
+    "next": "Next",
+    "back": "Back"
 }

@@ -41,13 +41,13 @@ export default function Index() {
               <div className=" lg:w-[360px] 2xl:w-[480px]">
                 <div className="h-full flex flex-col lg:flex-row items-start lg:items-end justify-between">
                   <div className="space-x-4">
-                    <button onClick={() => onChangeLanguage("vi-VN")} className="hover:scale-110 w-[71px] h-[37px] lg:w-14 lg:h-9 rounded-[18px] bg-[#1E96A5] border-[1px] border-[#1E96A5]  text-white font-medium text-sm lg:text-xs">VIE</button>
-                    <button onClick={() => onChangeLanguage("en-US")} className="hover:scale-110 w-[71px] h-[37px] lg:w-14 lg:h-9 rounded-[18px] bg-transparent border-[1px] border-black font-medium text-sm lg:text-xs">ENG</button>
+                    <button onClick={() => onChangeLanguage("vi-VN")} className="hover:scale-110 w-[71px] h-[37px] lg:w-[67px] lg:h-[35px] rounded-[18px] bg-[#1E96A5] border-[1px] border-[#1E96A5]  text-white font-medium text-xs">VIE</button>
+                    <button onClick={() => onChangeLanguage("en-US")} className="hover:scale-110 w-[71px] h-[37px] lg:w-[67px] lg:h-[35px] rounded-[18px] bg-transparent border-[1px] border-bvsDrakTeal text-bvsDrakTeal font-medium text-xs">ENG</button>
                   </div>
                  <div>
                   <div className="hidden lg:block">
-                    <Link href="/intro">
-                        <button onClick={updateName} className="w-[130px] h-9 border-1 rounded-[17px] bg-bvsPeach text-white font-medium text-sm">
+                    <Link href="/action-plan" passHref>
+                        <button onClick={updateName} className="hover:scale-105 w-[130px] h-9 border-1 rounded-[17px] bg-bvsPeach text-white font-medium text-xs">
                             <a>NEXT PAGE</a>
                       </button>
                       </Link>
@@ -63,19 +63,19 @@ export default function Index() {
                       <p className="font-medium ">{t('hi')}</p>
                       <input ref={inputEl} className="bg-transparent text-bvsPeach font-medium sm:w-[100px] lg:w-[120px] focus:outline-none placeholder-[#FF3750]" placeholder="Your Name" type="text"/>
                     </div>
-                    <div className="absolute -right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-4 xl:top-4 2xl:right-4 2xl:top-4 z-20 text-[26px] xl:text-[30px] 2xl:text-[34px] font-semibold animate-hide-and-up-3 w-[310px]">
-                      <p>We are</p>
-                      <p className="text-bvsTeal">BVIS WellBeing</p>
-                      <p className="text-bvsTeal">Buddies</p>
+                    <div className={"absolute -right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-4 xl:top-4 2xl:right-8 2xl:top-4 z-20 text-[26px] xl:text-[30px] 2xl:text-[34px] font-semibold animate-hide-and-up-3 w-[310px]"}>
+                      <p>{t('weAre')}</p>
+                      <p className="text-bvsTeal">{t('areFriend')}</p>
+                      <p className="text-bvsTeal">{t('wellbeingBVSI')}</p>
                     </div>
                     <div className="2xl:w-[766px]">
-                      <Image src={titleMascot}/>
+                      <Image alt="title mascot" src={titleMascot}/>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="lg:hidden mt-4 mx-auto pr-[46px]">
-                    <Link href="/intro">
+                    <Link href="/intro" passHref>
                         <button onClick={updateName} className="w-[130px] h-9 border-1 rounded-[17px] bg-bvsPeach text-white font-medium text-sm">
                             <a>NEXT PAGE</a>
                       </button>

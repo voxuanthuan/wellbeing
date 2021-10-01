@@ -45,7 +45,7 @@ export default function Quizzes() {
         } else if (questions[questionNumber - 1].score !== undefined) {
             return "text-bvsTeal";
         } else {
-            return "text-black opacity-25"
+            return "text-black font-[16px]"
         }
     }
 
@@ -109,16 +109,16 @@ export default function Quizzes() {
                 <div className="w-full h-heightBody">
                     <div className="h-full w-full flex justify-center items-center">
                         <div className="relative">
-                            <p className="relative -top-16 left-6 text-sm font-medium opacity-50">{pagesNumber} / 15</p>
+                            <p className="relative -top-16 left-6 text-base font-medium text-black opacity-60">{pagesNumber} / 15</p>
                             <table className="table">
                                 <thead>
                                     <tr>
                                         <th className="p-3 text-left font-semibold text-[36px] text-bvsPeach underline">{t('question')}</th>
-                                        <th className="p-3 font-normal text-sm text-bvsDrakTeal">{t('never')}</th>
-                                        <th className="p-3 font-normal text-sm text-bvsDrakTeal">{t('onceAMonth')}</th>
-                                        <th className="p-3 font-normal text-sm text-bvsDrakTeal">{t('onceAWeek')}</th>
-                                        <th className="p-3 font-normal text-sm text-bvsDrakTeal">{t('mostDays')}</th>
-                                        <th className="p-3 font-normal text-sm text-bvsDrakTeal">{t('everyDay')}</th>
+                                        <th className="p-3 font-normal text-sm text-black text-opacity-80">{t('never')}</th>
+                                        <th className="p-3 font-normal text-sm text-black text-opacity-80">{t('onceAMonth')}</th>
+                                        <th className="p-3 font-normal text-sm text-black text-opacity-80">{t('onceAWeek')}</th>
+                                        <th className="p-3 font-normal text-sm text-black text-opacity-80">{t('mostDays')}</th>
+                                        <th className="p-3 font-normal text-sm text-black text-opacity-80">{t('everyDay')}</th>
                                     </tr>
                                 </thead>
                                 <tbody className="font-semibold">
@@ -139,9 +139,9 @@ export default function Quizzes() {
                                 </tbody>
                             </table>
                             { Number(id) !== 1 &&
-                                (<div className="absolute pl-3 lg:-bottom-28 xl:-bottom-40 w-[68px] h-[18px] text-black opacity-25 text-sm">
-                                    <Link href={`/quizzes/${(Number(id) - 1)}`}>
-                                        <button><a>Back</a></button>
+                                (<div className="absolute pl-3 lg:-bottom-28 xl:-bottom-40 w-[68px] h-[18px] text-black text-opacity-60 text-base">
+                                    <Link href={`/quizzes/${(Number(id) - 1)}`} passHref>
+                                        <button><a>{t('back')}</a></button>
                                     </Link>
                                 </div>)
                             }
@@ -152,15 +152,13 @@ export default function Quizzes() {
             <div className="bg-[#FAF5ED] w-1/3">
                 <div className="h-full flex justify-center items-center">
                     <div className="w-[387px]">
-                        <Image src={image}/>
+                        <Image alt="image" src={image}/>
                     </div>
                 </div>
-                <div className="relative bottom-[18%] left-submmitBetween">
-                        <button disabled={!isCompleted} className={"w-[109px] h-[35px] font-medium text-xs rounded-[15px] border-bvsPeach border-solid border-2 " + (isCompleted ? 'bg-bvsPeach text-white' : 'bg-transparent text-[#F0B4A0]')}>
-                            <a onClick={() => handleNextPage()}>NEXT</a>
-                            <span className="w-[10px] h-[6px] bg-white after:bg-bvsWarmWhite" />
-                        </button>
-                    </div>
+                <button onClick={() => handleNextPage()} disabled={!isCompleted} className={"relative bottom-[18%] left-submmitBetween text-base hover:scale-110 w-[123px] h-[40px] font-medium rounded-[15px] border-bvsPeach border-solid border-2 " + (isCompleted ? 'bg-bvsPeach text-white' : 'bg-transparent text-[#F0B4A0]')}>
+                    <a>{t('next').toLocaleUpperCase()}</a>
+                    <span className="w-[10px] h-[6px] bg-white after:bg-bvsWarmWhite" />
+                </button>
             </div>
         </div>
     )

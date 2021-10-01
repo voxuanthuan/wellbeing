@@ -3,10 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next -p 3005",
+    "dev": "next -p 3006",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start -p 3009",
+    "lint": "next lint",
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch",
+    "test:coverage": "NODE_ENV=test jest --coverage",
+    "test:cypress": "NODE_ENV=test cypress open",
+    "lint:watch": "esw . --watch --cache",
+    "lint:watchAll": "esw . --watch",
+    "circleci:run": "circleci local execute --job $JOB"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voxuanthuan/wellbeing/tree/master"
   },
   "dependencies": {
     "classnames": "^2.3.1",
