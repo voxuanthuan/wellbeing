@@ -24,47 +24,61 @@ export default function Connect() {
                 <Header />
                 <div className="h-heightBody w-full pt-40">
                    <div className="w-full mx-auto  text-center">
-                    <p className="font-medium text-[24px] mx-auto w-[740px] text-bvsNavy">If you have any questions or are worried about your wellbeing,
+                    <p className="font-semibold text-[24px] mx-auto w-[740px] text-bvsNavy">If you have any questions or are worried about your wellbeing,
     there are lots of people you can talk to at BVIS</p>
                     </div>
-                    <div className="flex justify-around mt-24 w-[900px] mx-auto">
+                    <div className="flex justify-around mt-24 w-[900px] mx-auto space-x-12">
                         <div className="flex flex-col items-center max-w-[204px]">
-
-                            <div className="w-[151px] bg-bvsOrange relative">
-                                <Image alt="frame image" src={porTraitFrame}/>
-                                <div className="absolute z-10 w-full">
+                            <div className="w-[151px] relative">
+                                <div className="w-full h-full">
+                                    <Image alt="frame image" src={porTraitFrame}/>
+                                </div>
+                                <div className="absolute z-10 top-[24px] right-[36px]">
                                     <Image alt="teacher image" src={teacherImage}/>
                                 </div>
                             </div>
-                            <p className="font-medium text-xs text-bvsDrakTeal mt-[21px] text-center">Your class teacher​ in Primary or​ Your Form Tutor​ in Secondary</p>
+                            <p className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">Your Form Tutor</p>
                         </div>
                         <div className="flex flex-col items-center max-w-[204px] relative">
-                            <div className="w-[151px] bg-bvsOrange">
-                                <Image alt="house of head image" src={porTraitFrame}/>
+                            <div className="w-[151px] relative">
+                                <div className="w-full h-full">
+                                    <Image alt="frame image" src={porTraitFrame}/>
+                                </div>
+                                <div className="absolute z-10 top-[20px] right-[33px]">
+                                    <Image alt="teacher image" src={headImage}/>
+                                </div>
                             </div>
-                            <p className="font-medium text-xs text-bvsDrakTeal mt-[21px] text-center">Your Head of House or Head of Sixth Form​
-                            in Secondary</p>
+                            <p className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">Your Head of House Head of Sixth Form</p>
                         </div>
                         <div className="flex flex-col items-center max-w-[204px]">
-                            <div className="w-[151px] bg-bvsOrange">
-                                <Image alt="mr luke curran" src={porTraitFrame}/>
+                            <div className="w-[151px] relative overflow-hidden">
+                                <div className="w-full h-full">
+                                    <Image alt="frame image" src={porTraitFrame}/>
+                                </div>
+                                <div className="absolute z-10 top-[7px] right-[19px]">
+                                    <Image alt="Mr Luke Curran" src={mrLukeCurranImage}/>
+                                </div>
                             </div>
-                                <span className="font-medium text-xs text-bvsDrakTeal mt-[21px] text-center">Mr. Luke Curran​​
-                                The School Counsellor​
-                                </span>
-                                <span className="font-medium text-xs text-bvsDrakTeal text-center">Luke.Curran@bvisivietnam.com 
-                                </span>
+                            <span className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">Mr. Luke Curran​​ The School Counsellor​
+                            </span>
+                            <span className="font-semibold text-sm text-bvsDrakTeal text-center">Luke.Curran@bvisivietnam.com 
+                            </span>
                         </div>
                         <div className="flex flex-col items-center max-w-[204px]">
-                            <div className="w-[151px] bg-bvsOrange">
-                                <Image alt="student council" src={porTraitFrame}/>
+                            <div className="w-[151px] relative">
+                                <div className="w-full h-full">
+                                    <Image alt="frame image" src={porTraitFrame}/>
+                                </div>
+                                <div className="absolute z-10 top-[58px] right-[27px]">
+                                    <Image alt="Mr Luke Curran" src={mailBoxImage}/>
+                                </div>
                             </div>
-                            <p className="font-medium text-xs text-bvsDrakTeal mt-[21px] text-center">The Student Council​
+                            <p className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">The Student Council​
                             Worry box​</p>
-                            <p className="font-medium text-xs text-bvsDrakTeal text-center">Theworrybox@bvisivietnam.com​</p>
+                            <p className="font-semibold text-sm text-bvsDrakTeal text-center">Theworrybox@bvisivietnam.com​</p>
                         </div>
                     </div>
-                    <p className="font-medium text-[36px] text-center text-bvsPeach">we are here to help</p>
+                    <p className="font-semibold text-[36px] text-center text-bvsPeach mt-40">we are here to help</p>
                 </div>
             </div>
         </div>

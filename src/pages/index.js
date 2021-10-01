@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Header from '../components/Header';
 import titleMascot from '../../public/title-mascots.png';
 import { useAppContext } from '../context';
+import NextArrow from '../../public/arrow_next.svg'
 
 export default function Index() {
   const inputEl = useRef(null);
@@ -46,9 +47,12 @@ export default function Index() {
                   </div>
                  <div>
                   <div className="hidden lg:block">
-                    <Link href="/action-plan" passHref>
-                        <button onClick={updateName} className="hover:scale-105 w-[130px] h-9 border-1 rounded-[17px] bg-bvsPeach text-white font-medium text-xs">
-                            <a>NEXT PAGE</a>
+                    <Link href="/intro" passHref>
+                        <button onClick={updateName} className="hover:scale-105 w-[130px] h-9 border-1 rounded-[17px] bg-bvsPeach text-white font-medium text-base flex items-center justify-center">
+                            <a>{t('next').toLocaleUpperCase()}</a>
+                            <div className="ml-3">
+                              <Image src={NextArrow}/>
+                            </div>
                       </button>
                       </Link>
                   </div>
