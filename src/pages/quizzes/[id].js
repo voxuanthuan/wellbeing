@@ -8,7 +8,8 @@ import {useAppContext} from '../../context';
 import Header from '../../components/Header';
 import quizBW from '../../../public/quiz_bw.png';
 import quizColor from '../../../public/quiz_color.png';
-
+import arrowNext from '../../../public/arrow_next.svg';
+import arrowBack from '../../../public/arrow_back.svg';
 
 export default function Quizzes() {
     const {t} = useTranslation();
@@ -139,11 +140,16 @@ export default function Quizzes() {
                                 </tbody>
                             </table>
                             { Number(id) !== 1 &&
-                                (<div className="absolute pl-3 lg:-bottom-28 xl:-bottom-40 w-[68px] h-[18px] text-black text-opacity-60 text-base">
+                                (
                                     <Link href={`/quizzes/${(Number(id) - 1)}`} passHref>
-                                        <button><a>{t('back')}</a></button>
+                                        <div className="hover:cursor-pointer hover:scale-110 absolute pl-3 lg:-bottom-28 xl:-bottom-40 h-100px text-black text-opacity-70 text-base flex justify-center items-center">
+                                            <div className="pr-2 flex items-center">
+                                                <Image src={arrowBack}/>
+                                            </div>
+                                            <p>{t('back')}</p>
+                                        </div>
                                     </Link>
-                                </div>)
+                                )
                             }
                         </div>
                     </div>
@@ -155,9 +161,11 @@ export default function Quizzes() {
                         <Image alt="image" src={image}/>
                     </div>
                 </div>
-                <button onClick={() => handleNextPage()} disabled={!isCompleted} className={"relative bottom-[18%] left-submmitBetween text-base hover:scale-110 w-[123px] h-[40px] font-medium rounded-[15px] border-bvsPeach border-solid border-2 " + (isCompleted ? 'bg-bvsPeach text-white' : 'bg-transparent text-[#F0B4A0]')}>
-                    <a>{t('next').toLocaleUpperCase()}</a>
-                    <span className="w-[10px] h-[6px] bg-white after:bg-bvsWarmWhite" />
+                <button onClick={() => handleNextPage()} disabled={!isCompleted} className={"flex items-center justify-center relative bottom-[18%] left-submmitBetween text-base w-[123px] h-[40px] font-medium rounded-[15px] border-bvsPeach border-solid border-2 hover:scale-110 " + (isCompleted ? 'bg-bvsPeach text-white' : 'bg-transparent text-[#F0B4A0] hover:scale-100 hover:cursor-not-allowed')}>
+                    <a>{id == 3 ? t('submit').toLocaleUpperCase() : t('next').toLocaleUpperCase()}</a>
+                    <div className="pl-1">
+                        <Image alt="arrow next" src={arrowNext}/>
+                    </div>
                 </button>
             </div>
         </div>

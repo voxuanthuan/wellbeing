@@ -45,7 +45,7 @@ export default function ActionPlan() {
                             <p className="w-full text-[#1E96A5] text-[24px] font-semibold max-w-[327px] leading-7">{t('importantThing')}</p>
                         </div>
                         <Link href="/result" passHref>
-                                <button className="w-full hover:text-opacity-80 text-black text-opacity-60 mt-40">
+                                <button className="w-full hover:text-opacity-80 text-black text-opacity-60 mt-20">
                                         <div className="w-full flex items-center justify-center space-x-2">
                                             <div className="w-[18px] h-[18px] rounded-[14px]">
                                                 <Image alt="arrow back" src={arrowBack}/>
@@ -127,7 +127,7 @@ export default function ActionPlan() {
                                     </div>
                                 </div>
 
-                                <div className="flex mt-[185px] items-center">
+                                <div className="flex mt-[110px] items-center">
                                         <Link href="/help" passHref>
                                             <button className="hover:scale-105 w-[130px] h-[39px] bg-bvsPeach font-medium rounded-[17px] text-white text-base"><a>{t('needHelp').toLocaleUpperCase()}</a></button>
                                         </Link>

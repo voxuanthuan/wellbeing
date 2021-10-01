@@ -35,7 +35,7 @@ export default function Intro() {
                             </div>
                             <div className="hidden lg:flex flex-col items-center">
                                 <Link href="/quizzes/1" passHref>
-                                    <button className="hover:scale-x-105 w-[130px] h-[39px] rounded-[17px] font-medium text-sm bg-bvsPeach text-white">
+                                    <button className="hover:scale-105 w-[130px] h-[39px] rounded-[17px] font-medium text-sm bg-bvsPeach text-white">
                                         <a>{t('takeQuiz').toLocaleUpperCase()}</a>
                                     </button>
                                 </Link>
@@ -97,7 +97,7 @@ export default function Intro() {
                                 </ul>
                                 <div className= "flex flex-col items-center lg:hidden">
                                     <Link href="/quizzes/1" passHref>
-                                        <button className="w-[178px] h-[42px] rounded-[17px] font-medium text-sm bg-bvsPeach text-white">
+                                        <button className="hover:scale-105 w-[178px] h-[42px] rounded-[17px] font-medium text-sm bg-bvsPeach text-white">
                                             <a>{t('takeQuiz')}</a>
                                         </button>
                                     </Link>

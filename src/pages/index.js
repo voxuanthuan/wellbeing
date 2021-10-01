@@ -80,10 +80,13 @@ export default function Index() {
               </div>
               <div className="lg:hidden mt-4 mx-auto pr-[46px]">
                     <Link href="/intro" passHref>
-                        <button onClick={updateName} className="w-[130px] h-9 border-1 rounded-[17px] bg-bvsPeach text-white font-medium text-sm">
-                            <a>NEXT PAGE</a>
+                        <button onClick={updateName} className="hover:scale-105 w-[130px] h-9 border-1 rounded-[17px] bg-bvsPeach text-white font-medium text-base flex items-center justify-center">
+                            <a>{t('next').toLocaleUpperCase()}</a>
+                            <div className="ml-3">
+                              <Image src={NextArrow}/>
+                            </div>
                       </button>
-                      </Link>
+                    </Link>
                   </div>
             </div>
         </div>

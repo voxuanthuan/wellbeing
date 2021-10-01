@@ -315,7 +315,7 @@ export default function Result() {
                             {renderOnDesktop()}
                             <div className="hidden lg:flex flex-col items-center mt-16">
                                 <Link href="/action-plan" passHref>
-                                    <button className={"hover:scale-110 bg-bvsPeach rounded-[15px] text-base font-medium text-white mb-2 " + (isVietNamese() ? "w-[200px] h-[40px]" : "w-[144px] h-[35px]")}>
+                                    <button className={"hover:scale-105 bg-bvsPeach rounded-[15px] text-base font-medium text-white mb-2 " + (isVietNamese() ? "w-[200px] h-[40px]" : "w-[144px] h-[35px]")}>
                                         <a>{t('actionPlanButotn').toLocaleUpperCase()}</a>
                                     </button>
                                 </Link>
