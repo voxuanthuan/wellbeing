@@ -114,6 +114,14 @@ module.exports = {
           transform: 'translateX(0)'
         }
       },
+      'fade-up': {
+        '0%': {
+          opacity: '0',
+        },
+        '100%': {
+          opacity: '1',
+        }
+      }
     },
     animation: {
       'fade-in-up': 'fade-in-up 0.5s ease-in',
@@ -124,6 +132,7 @@ module.exports = {
       'left-to-right-2': 'left-to-right-2 1.5s ease-out',
       'left-to-right-3': 'left-to-right-3 2s ease-out',
       'left-to-right-4': 'left-to-right-4 2.5s ease-out',
+      'fade-up': 'fade-up 2s ease-out'
     },
     maxWidth: {
       '35': '35px'
@@ -155,6 +164,9 @@ module.exports = {
       fontFamily: {
         'montserrat': ['"Montserrat"', 'sans-serif']
       },
+      zIndex: {
+        '-10': '-10'
+      }
     },
 
   },

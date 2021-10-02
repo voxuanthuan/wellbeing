@@ -19,6 +19,7 @@ export default function Index() {
   const updateName = (e) => {
     setName(inputEl.current.value);
   }
+  console.log(i18n.language)
   return (
     <div className="bg-[#B4EBF5] relative">
       <Header/>
@@ -30,13 +31,22 @@ export default function Index() {
       </Head>
         <div className="pl-16 xl:pl-48 h-full">
           <div className="font-bold text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl pt-10 lg:pt-20">
-            <div>
-              <div className="flex items-start">
-                <h1 className="">BVS&#160;</h1>
-                <h1 className=" text-[#cc2c40] animate-fade-in-up inline">WELLBEING</h1>
-              </div>
-              <h1>CAMPAIGN</h1>
-            </div>
+            {
+              i18n.language !== "vi-VN" ? (
+                <div>
+                  <div className="flex items-start">
+                    <p>{t('bvis').toLocaleUpperCase()}&#160;</p>
+                    <p className=" text-[#cc2c40] animate-fade-in-up inline">{t("wellbeing").toLocaleUpperCase()}</p>
+                  </div>
+                  <p>{t('campagin').toLocaleUpperCase()}</p>
+                </div>
+              ) : (
+                <div>
+                  <p>{t('campagin').toLocaleUpperCase()}</p>
+                  <p className=" text-[#cc2c40]">{t('wellbeing').toLocaleUpperCase()}</p>
+                </div>
+              )
+            }
           </div>
           <div className="flex flex-col lg:flex-row h-heightMinusWellBeing pt-11 lg:pt-0 pb-0 lg:pb-11">
               <div className=" lg:w-[360px] 2xl:w-[480px]">
@@ -67,7 +77,9 @@ export default function Index() {
                       <p className="font-medium ">{t('hi')}</p>
                       <input ref={inputEl} className="bg-transparent text-bvsPeach font-medium sm:w-[100px] lg:w-[120px] focus:outline-none placeholder-[#FF3750]" placeholder="Your Name" type="text"/>
                     </div>
-                    <div className={"absolute -right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-4 xl:top-4 2xl:right-8 2xl:top-4 z-20 text-[26px] xl:text-[30px] 2xl:text-[34px] font-semibold animate-hide-and-up-3 w-[310px]"}>
+                    <div className={"absolute -right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-4 xl:top-4 2xl:right-8 2xl:top-4 z-20 text-[26px] xl:text-[30px] 2xl:text-[34px] font-semibold animate-hide-and-up-3 w-[310px]"
+                      + (i18n.language === "vi-VN" ? "-right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-4 xl:top-4 2xl:right-[35px] 2xl:text-[32px]": "-right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-4 xl:top-4 2xl:right-10" )
+                    }>
                       <p>{t('weAre')}</p>
                       <p className="text-bvsTeal">{t('areFriend')}</p>
                       <p className="text-bvsTeal">{t('wellbeingBVSI')}</p>

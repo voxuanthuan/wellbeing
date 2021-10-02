@@ -22,34 +22,36 @@ export default function TakeNotice() {
     const {t} = useTranslation()
     return (
         <div className="h-screen bg-takeNotice bg-no-repeat bg-cover">
-                <div className="flex justify-end pt-5 pr-8">
-                    <div className="flex items-center">
-                        <p className="text-bvsDrakTeal font-medium  text-xs">{t('take-notice').toLocaleUpperCase()}</p>
-                        <span className="ml-3 relative top-[2px]"><Image alt="image" src={takeNoticeTag}/></span>
-                    </div>
+            <div className="flex justify-end pt-5 pr-8">
+                <div className="flex items-center">
+                    <p className="text-bvsDrakTeal font-medium">{t('take-notice').toLocaleUpperCase()}</p>
+                    <div className="ml-3"><Image alt="beactive tag" src={takeNoticeTag}/></div>
                 </div>
-                <div className="h-heightBody w-full flex pt-10">
-                    <div className="w-1/6 h-5/6 flex flex-col pl-32 pt-24">
-                        <div>
-                            <Image alt="image" src={takeNoticeIcon}/>
-                        </div>
-                        <div className="mt-52">
-                            <div className="h-[265px] w-[2px]">
-                                <div className="bg-black opacity-25 h-[168px]"></div>
-                                <div className="bg-bvsDrakTeal h-[79px]"></div>
-                                <div className="relative w-full block">
-                                    <h1 className="w-full text-bvsDrakTeal text-xs font-medium top-20 absolute transform -rotate-90 origin-center whitespace-nowrap">{t('take-notice').toLocaleUpperCase()}</h1>
+            </div>
+            <div className="w-full flex justify-center items-center">
+                <div>
+                    <div className="h-heightBody w-full flex">
+                        <div className="w-1/6 h-5/6 flex flex-col pl-32 pt-24">
+                            <div>
+                                <Image alt="beactive icon" src={takeNoticeIcon}/>
+                            </div>
+                            <div className="mt-28">
+                                <div className="h-[265px] w-[2px]">
+                                    <div className="bg-black opacity-25 h-[168px]"></div>
+                                    <div className="bg-bvsTeal h-[79px]"></div>
+                                    <div className="relative w-full block">
+                                    <h1 className="w-full text-bvsDrakTeal text-xs font-medium top-24 absolute transform -rotate-90 origin-center whitespace-nowrap">{t('be-active').toLocaleUpperCase()}</h1>
+                                    </div>
                                 </div>
+
                             </div>
 
                         </div>
-
-                    </div>
-                    <div className="h-full w-3/6 max-w-[828px]">
-                        <h1 className="font-semibold text-4xl mt-20" dangerouslySetInnerHTML={{__html: t('takeNoticeDetail')}}></h1>
-                        <div className="mt-20">
-                            <h3 className="font-medium text-[18px] mb-10">{t('whynot')}</h3>
-                            <div className="flex  text-sm font-normal text-black text-opacity-70">
+                        <div className="h-full w-3/6 max-w-[828px]">
+                            <h1 className="font-semibold text-4xl mt-20" dangerouslySetInnerHTML={{__html: t('takeNoticeDetail')}}></h1>
+                            <div className="mt-20">
+                                <h3 className="font-medium text-[18px] mb-10">{t('whynot')}</h3>
+                                <div className="flex text-sm font-normal text-black text-opacity-70">
                                 <ul className="ml-5">
                                     <li>
                                         <div className="mb-4 flex items-center">
@@ -96,18 +98,20 @@ export default function TakeNotice() {
                                         </div>
                                     </li>
                                 </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-2/6 h-full">
+                            <div className="mt-20">
+                                <Image alt="music image" src={musicImage}/>
+                            </div>
+                            <div className="w-[400px] 2xl:w-[500px] mt-32 2xl:mt-20 relative top-10 xl:top-0 right-20 2xl:right-32">
+                                <Image alt="beactive image" src={takeNoticeImage}/>
                             </div>
                         </div>
                     </div>
-                    <div className="w-2/6 h-full relative">
-                           <div className="absolute top-12 right-0">
-                               <Image alt="image" src={musicImage}/>
-                           </div>
-                           <div className="w-[500px] top-80 absolute right-32 -z-10">
-                               <Image alt="image" src={takeNoticeImage}/>
-                           </div>
-                    </div>
                 </div>
             </div>
+        </div>
     )
 }

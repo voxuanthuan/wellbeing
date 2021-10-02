@@ -135,5 +135,17 @@
     "wellbeingBVSI": "Wellbeing BVIS",
     "next": "Tiếp theo",
     "submit": "Kết Quả",
-    "back": "Back"
+    "back": "Back",
+
+    "helpTitle": "Mọi thắc mắc hoặc lo lắng về sức khỏe tinh thần của bạn đều được các thành viên BVIS ân cần lắng nghe",
+    "formTutor": "Giáo viên chủ nhiệm",
+    "headOfHouse": "Trưởng Đội nhà hoặc Trưởng khối Lớp 12 & 13",
+    "mrLukeCurran": "Thầy Curran Trưởng ban Bảo vệ Trẻ em, Tư vấn Tâm lý và Sức khỏe",
+    "worryBox": "Worry Box của Hội đồng Học sinh",
+    "toHelp": "Nhà trường sẵn sàng giúp đỡ",
+
+    "bvis": "BVIS",
+    "wellbeing": "Sức khỏe tinh thần",
+    "campagin": "Chiến dịch nâng cao",
+    "space": ""
 }

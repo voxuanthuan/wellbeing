@@ -80,7 +80,7 @@ export default function Result() {
 
     function renderOnDesktop() {
         return (
-            <div className="hidden lg:flex justify-around text-bvsDrakTeal">
+            <div className="hidden lg:flex justify-around text-bvsDrakTeal space-x-0">
                 <div className="flex flex-col justify-center rounded-[20px] h-[250px] lg:h-auto lg:rounded-none  w-[400px] lg:w-[120px] bg-white bg-opacity-40 lg:bg-transparent lg:bg-opacity-100">
                     <div className="w-full">
                         <div className="mb-[15px] w-full lg:max-w-180px">
@@ -266,37 +266,35 @@ export default function Result() {
             </div>
         )
     }
-
-    console.log(totalScore)
     return (
         <div className="bg-bvsTealLight lg:bg-[#FAF5ED] bg-no-repeat bg-cover">
             <Header/>
             <div className="h-full lg:h-heightBody">
-                <div className="flex flex-col h-44 pt-[40px] items-center">
+                <div className="flex flex-col h-32 pt-[10px] items-center">
                     <p className="font-medium text-[20px]">{`${name}${t('suffix')}`}</p>
                     <h1 className="font-semibold text-[36px] text-bvsPeach inline-block">{t('wellbeingReport').toLocaleUpperCase()}</h1>
                 </div>
                 <div className="w-full flex flex-col lg:flex-row">
-                     <p className="lg:hidden text-[24px] font-semibold text-bvsNavy leading-[27px] mb-7 text-center">{t('overallWellbeing')}</p>
+                     <p className="lg:hidden text-[24px] font-semibold text-bvsNavy leading-[27px] mb-5 text-center">{t('overallWellbeing')}</p>
                     <div className="w-full lg:w-1/3">
                         <p className="hidden lg:block text-[24px] font-semibold text-bvsNavy leading-[27px] mb-20 text-center">{t('overallWellbeing')}</p>
                        <div className="flex flex-col items-center">
                            <div className="flex">
-                               <div className="text-base font-normal text-bvsDrakTeal text-right text- leading-[16px] relative -left-10 top-[50px] lg:-left-3 lg:top-[44px] xl:-left-10">
+                               <div className="text-base font-normal text-bvsDrakTeal leading-[16px] relative -left-10 top-[50px] lg:-left-3 lg:top-[44px] xl:-left-10">
                                     <p
-                                        className={"mb-[14px] xl:mb-[29px] "
-                                        + (i18n.language === 'vi-VN' ? "max-w-[180px]" : "max-w-[130px] ") + (totalScore <= 60 && totalScore > 45 ? "text-bvsPeach font-semibold" : "")}
+                                        className={"mb-[14px] xl:mb-[29px] flex justify-end text-right "
+                                        + (i18n.language === 'vi-VN' ? "max-w-[180px] " : "max-w-[130px] ") + (totalScore <= 60 && totalScore > 45 ? "text-bvsPeach font-semibold" : "")}
                                     >{t('wellbeingChampion')}</p>
-                                    <p className={"mb-[29px] " 
-                                        + (i18n.language === 'vi-VN' ? "max-w-[180px]" : "max-w-[130px] ")
+                                    <p className={"mb-[29px] text-right " 
+                                        + (i18n.language === 'vi-VN' ? "max-w-[180px] " : "max-w-[130px] ")
                                         + (totalScore <= 45 && totalScore > 30 ? "text-bvsPeach font-semibold" : "")
                                         }>{t('doingWell')}</p>
-                                    <p className={"mb-[29px] "
-                                         + (i18n.language === 'vi-VN' ? "max-w-[180px]" : "max-w-[130px] ")
+                                    <p className={"mb-[29px] text-right "
+                                         + (i18n.language === 'vi-VN' ? "max-w-[180px] " : "max-w-[130px] ")
                                          + (totalScore <= 30 && totalScore > 15 ? "text-bvsPeach font-semibold" : "")
                                         }>{t('makingProcess')}</p>
-                                    <p className={"mb-[29px] " 
-                                         + (i18n.language === 'vi-VN' ? "max-w-[180px]" : "max-w-[130px] ")
+                                    <p className={"mb-[29px] text-right " 
+                                         + (i18n.language === 'vi-VN' ? "max-w-[180px] " : "max-w-[130px] ")
                                          + (totalScore <= 15 ? "text-bvsPeach font-semibold" : "")
                                          }>{t('trySomethingNew')}</p>
                                </div>
@@ -310,7 +308,7 @@ export default function Result() {
                     </div>
                     <div className="w-full lg:w-2/3 flex">
                         <div className={"flex flex-col w-full " + (isVietNamese() ? "lg:w-[70%]" : "lg:w-5/6 ")}>
-                            <p className="hidden lg:block text-[24px] font-semibold text-bvsNavy leading-[27px] mb-32 text-center">{t('wellbeingTracker')}</p>
+                            <p className="hidden lg:block text-[24px] font-semibold text-bvsNavy leading-[27px] mb-20 text-center">{t('wellbeingTracker')}</p>
                             {renderOnMobile()}
                             {renderOnDesktop()}
                             <div className="hidden lg:flex flex-col items-center mt-16">
@@ -322,7 +320,7 @@ export default function Result() {
                                 <p className={"text-base text-black opacity-60 text-center "  + (isVietNamese() ? "max-w-[260px]" : "max-w-[200px]")}>{t('clickToActionPlan')}</p>
                             </div>
                         </div>
-                        <div className={"h-2/4 hidden lg:block relative top-[164px] text-black text-opacity-60 " + (isVietNamese() ? "w-[30%]" : "w-1/6 ")}>
+                        <div className={"h-2/4 hidden lg:block relative top-[116px] text-black text-opacity-60 " + (isVietNamese() ? "w-[30%]" : "w-1/6 xl:w-2/6 2xl:w-1/6 ")}>
                             <div className="text-xs font-medium mb-[6px] xl:mb-1">
                                 <div className="flex items-center">
                                     <div className="w-1 h-1 bg-black rounded-[4px]"></div>

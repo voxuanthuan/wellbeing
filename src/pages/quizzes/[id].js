@@ -42,11 +42,11 @@ export default function Quizzes() {
 
     const getColor = (questionNumber) => {
         if (currentCheckedQuestion === questionNumber) {
-            return "text-bvsDrakTeal"
+            return "text-black"
         } else if (questions[questionNumber - 1].score !== undefined) {
             return "text-bvsTeal";
         } else {
-            return "text-black font-[16px]"
+            return "text-black text-opacity-60"
         }
     }
 
@@ -59,7 +59,7 @@ export default function Quizzes() {
 
     const isCompleted = currentCheckedQuestion > Number(id)*5;
 
-    const classStr = (number) => `p-3 max-w-[470px]  ${getColor(number)}`
+    const classStr = (number) => `p-3 max-w-[470px] ${getColor(number)}`
 
     const handleSelect = (e, index) => {
         const updateQuestion = [...questions];
@@ -144,7 +144,7 @@ export default function Quizzes() {
                                     <Link href={`/quizzes/${(Number(id) - 1)}`} passHref>
                                         <div className="hover:cursor-pointer hover:scale-110 absolute pl-3 lg:-bottom-28 xl:-bottom-40 h-100px text-black text-opacity-70 text-base flex justify-center items-center">
                                             <div className="pr-2 flex items-center">
-                                                <Image src={arrowBack}/>
+                                                <Image alt="arrowBack" src={arrowBack}/>
                                             </div>
                                             <p>{t('back')}</p>
                                         </div>
@@ -156,7 +156,7 @@ export default function Quizzes() {
                 </div>
             </div>
             <div className="bg-[#FAF5ED] w-1/3">
-                <div className="h-full flex justify-center items-center">
+                <div className={"h-full flex justify-center items-center" + (image === quizColor ? " animate-fade-0.5s" : "")}>
                     <div className="w-[387px]">
                         <Image alt="image" src={image}/>
                     </div>

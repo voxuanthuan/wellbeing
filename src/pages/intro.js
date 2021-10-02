@@ -25,8 +25,8 @@ export default function Intro() {
                                 <div className="absolute -top-2 -left-7">
                                     <Image alt="quote" src={quoteIcon} />
                                 </div>
-                                <h1 className="font-semibold text-[28px] text-left">{t('aboutWellbeing').toLocaleUpperCase()}</h1>
-                                <p className="font-normal text-[20px] mb-16 leading-6 text-left">{t('wellbeingMean')}</p>
+                                <h1 className="font-semibold text-[28px] text-left relative z-10">{t('aboutWellbeing').toLocaleUpperCase()}</h1>
+                                <p className="font-normal text-[20px] mb-16 leading-6 text-left relative z-10">{t('wellbeingMean')}</p>
                             </div>
                             <div className="w-full flex justify-center mb-9">
                                 <div className="lg:max-w-[429px]">

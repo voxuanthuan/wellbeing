@@ -34,15 +34,15 @@ export default function ActionPlan() {
                 <div className="absolute z-10 h-full top-0 bottom-0 right-0 left-0">
                     <div className="h-full flex">
                         <div className="w-1/3 h-full">
-                        <div className="mt-80 ml-20 relative">
+                        <div className="mt-40 ml-20 relative">
                                 <div className="absolute -top-4 -left-4 w-[81px] h-[71px]">
                                     <Image alt="quote image" src={quoteIcon} />
                                 </div>
-                            <p className="text-black text-opacity-60">{t('topTip')}</p>
-                            <p className="max-w-[207px] text-[24px] font-semibold text-bvsTeal leading-[29px]">{t('topTipContent')}</p>
+                            <p className="text-black text-opacity-60 relative z-10">{t('topTip')}</p>
+                            <p className="max-w-[207px] text-[24px] font-semibold text-bvsTeal leading-[29px] relative z-10">{t('topTipContent')}</p>
                         </div>
                         <div className="mt-40 flex justify-end">
-                            <p className="w-full text-[#1E96A5] text-[24px] font-semibold max-w-[327px] leading-7">{t('importantThing')}</p>
+                            <p className="w-full text-[#1E96A5] text-[24px] font-semibold max-w-[327px] leading-7 relative z-10">{t('importantThing')}</p>
                         </div>
                         <Link href="/result" passHref>
                                 <button className="w-full hover:scale-105 hover:opacity-40 text-black text-opacity-60 mt-20">
@@ -57,7 +57,7 @@ export default function ActionPlan() {
                         </div>
                         <div className="w-2/3 bg-bvsTealLight relative top-0">
                             <div className="ml-20">
-                                <p className="mt-[110px] mb-[13px] text-[20px] font-medium">{`${name}${t('suffix')}`}</p>
+                                <p className="mt-[20px] mb-[13px] text-[20px] font-medium">{`${name}${t('suffix')}`}</p>
                                 <h1 className="text-bvsPeach font-bold text-[36px] mb-[81px]" dangerouslySetInnerHTML={{__html: t('wellbeingActionPlan').toLocaleUpperCase()}}></h1>
                                 <div className="flex  mb-16">
                                     <div className="max-w-[360px] h-[110px] relative">
@@ -139,14 +139,14 @@ export default function ActionPlan() {
                 </div>
             </div>
             <div className="h-screen w-full bg-bvsTealLight">
-                <div className="pt-[160px] pl-[286px]">
+                <div className="pt-[120px] pl-[286px]">
                     <p className="text-[36px] font-semibold text-bvsNavy max-w-[658px] leading-[44px]">Here are some simple things to do everyday that can help you to feel happier and more positive...</p>
                 </div>
-              <div className="relative w-full h-full">
-                    <div className="absolute top-[200px] right-64">
+              <div className="relative w-full">
+                    <div className="absolute top-[160px] right-64">
                         <Image src={introductionImage}/>
                     </div>
-                    <div className="absolute top-[130px] right-0">
+                    <div className="absolute top-[90px] right-0">
                         <Image src={musicImage}/>
                     </div>
                 </div>
