@@ -140,7 +140,7 @@ export default function ActionPlan() {
             </div>
             <div className="h-screen w-full bg-bvsTealLight">
                 <div className="pt-[120px] pl-[286px]">
-                    <p className="text-[36px] font-semibold text-bvsNavy max-w-[658px] leading-[44px]">Here are some simple things to do everyday that can help you to feel happier and more positive...</p>
+                    <p className="text-[36px] font-semibold text-bvsNavy max-w-[658px] leading-[44px]">{t('tips')}</p>
                 </div>
               <div className="relative w-full">
                     <div className="absolute top-[160px] right-64">

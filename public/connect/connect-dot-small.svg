@@ -7,7 +7,7 @@
 </g>
 <circle cx="81.1666" cy="10.8333" r="7.33333" fill="#FF3750" stroke="#FAF5ED" stroke-width="3"/>
 <defs>
-<filter id="filter0_d" x="0" y="0.166656" width="95.8333" height="95.8333" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d" x="0" y="0.166656" width="95.8334" height="95.8333" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
