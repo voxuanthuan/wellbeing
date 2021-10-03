@@ -105,7 +105,7 @@ export default function Quizzes() {
 
     return (
         <div className="w-full flex">
-            <div className="bg-bvsTealLight w-2/3">
+            <div className="bg-bvsTealLight w-3/4 2xl:w-2/3">
                 <Header />
                 <div className="w-full h-heightBody">
                     <div className="h-full w-full flex justify-center items-center">
@@ -155,9 +155,9 @@ export default function Quizzes() {
                     </div>
                 </div>
             </div>
-            <div className="bg-[#FAF5ED] w-1/3">
+            <div className="bg-[#FAF5ED] w-1/4 2xl:w-1/3">
                 <div className={"h-full flex justify-center items-center" + (image === quizColor ? " animate-left-to-right-5" : "")}>
-                    <div className="w-[387px]">
+                    <div className="w-[80%]">
                         <Image alt="image" src={image}/>
                     </div>
                 </div>
