@@ -308,7 +308,7 @@ export default function Result() {
                     </div>
                     <p className="hidden lg:block 2xl:hidden text-[24px] font-semibold text-bvsNavy leading-[27px] mt-10 mb-10 xl:mb-5 xl:mt-5 text-center">{t('wellbeingTracker')}</p>
                     <div className="w-full 2xl:w-2/3 flex">
-                        <div className={"flex flex-col w-full " + (isVietNamese() ? "lg:w-[80%] 2xl:w-[70%]" : "2xl:w-5/6 ")}>
+                        <div className={"flex flex-col w-full " + (isVietNamese() ? "lg:w-[80%] 2xl:w-[70%]" : "lg:w-[80%] 2xl:w-5/6 ")}>
                             <p className="hidden 2xl:block text-[24px] font-semibold text-bvsNavy leading-[27px] mb-20 text-center">{t('wellbeingTracker')}</p>
                             {renderOnMobile()}
                             {renderOnDesktop()}
