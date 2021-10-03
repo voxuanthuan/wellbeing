@@ -1,11 +1,6 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-import Link from 'next/link';
-
-import Header from './Header';
-import transitionImage from '../../public/transition.png';
-import arrowImage from '../../public/keep-learning/arrow.svg';
 import musicImage from '../../public/music-image.svg';
 import keepLearningImage from '../../public/keep-learning.png'
 

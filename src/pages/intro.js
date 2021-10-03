@@ -14,7 +14,7 @@ import quoteIcon from '../../public/quote.svg';
 export default function Intro() {
     const {t} = useTranslation();
     return (
-        <div className="bg-introduction bg-no-repeat bg-cover">
+        <div className="bg-bvsWarmWhite xl:bg-introduction bg-no-repeat bg-cover">
             <Header/>
             <div className="h-full lg:h-heightBody w-[90%] mx-auto mt-12 lg:mt-0">
             <div className="h-full lg:flex flex-col lg:flex-row">
@@ -22,24 +22,24 @@ export default function Intro() {
                     <div className="lg:flex flex-col justify-center items-center h-full">
                         <div className="lg:max-w-[472px]">
                             <div className="relative">
-                                <div className="absolute -top-2 -left-7">
+                                <div className="w-[50px] h-[42px] xl:w-[81px] xl:h-[72px] absolute -top-1 xl:-top-2 -left-3 xl:-left-7">
                                     <Image alt="quote" src={quoteIcon} />
                                 </div>
-                                <h1 className="font-semibold text-[28px] text-left relative z-10">{t('aboutWellbeing').toLocaleUpperCase()}</h1>
-                                <p className="font-normal text-[20px] mb-16 leading-6 text-left relative z-10">{t('wellbeingMean')}</p>
+                                <h1 className="font-semibold text-[20px] xl:text-[24px] text-left relative z-10">{t('aboutWellbeing').toLocaleUpperCase()}</h1>
+                                <p className="font-normal text-[16px] xl:text-[20px] mb-16 leading-6 text-left relative z-10">{t('wellbeingMean')}</p>
                             </div>
-                            <div className="w-full flex justify-center mb-9">
-                                <div className="lg:max-w-[429px]">
+                            <div className="w-full flex justify-center mb-5">
+                                <div className="max-w-[300px] xl:max-w-[429px]">
                                     <Image alt="mascots" src={transition}/>
                                 </div>
                             </div>
-                            <div className="hidden lg:flex flex-col items-center">
+                            <div className="hidden lg:flex lg:flex-row-reverse xl:flex-col items-center">
                                 <Link href="/quizzes/1" passHref>
                                     <button className="hover:scale-105 w-[130px] h-[39px] rounded-[17px] font-medium text-sm bg-bvsPeach text-white">
                                         <a>{t('takeQuiz').toLocaleUpperCase()}</a>
                                     </button>
                                 </Link>
-                                <p className="font-normal text-sm text-black text-opacity-50 mb-4 mt-6 max-w-[350px] text-center">{t('hintWellbeing')}</p>
+                                <p className="font-normal text-sm text-black text-opacity-50 mb-4 mt-6 max-w-[350px] text-left xl:text-center">{t('hintWellbeing')}</p>
                             </div>
                         </div>
                     </div>
@@ -50,46 +50,46 @@ export default function Intro() {
                             <div className="h-full lg:flex items-center justify-center">
                                 <ul>
                                     <li className="animate-left-to-right-0">
-                                        <div className={"w-full h-[78px] space-x-[55px] flex mb-[50px]"}>
-                                            <div className="w-[75px] h-[75px]"><Image alt="connect icon" src={connectIcon} /></div>
-                                            <div className="max-h-[78px] xl:max-w-[350px] 2xl:max-w-[308px] text-sm justify-around">
-                                                <h1 className={"text-2xl font-semibold text-bvsOrange"} >{t('connect')}</h1>
+                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[55px] flex mb-[30px] xl:mb-[50px]"}>
+                                            <div className="w-[64px] h-[64px] xl:w-[75px] xl:h-[75px]"><Image alt="connect icon" src={connectIcon} /></div>
+                                            <div className="max-h-[78px] max-w-[300px] xl:max-w-[350px] 2xl:max-w-[308px] text-sm justify-around">
+                                                <h1 className={"text-xl xl:text-2xl font-semibold text-bvsOrange"} >{t('connect')}</h1>
                                                 <p className="text-[16px] font-normal">{t('connect-content')}</p>
                                             </div>
                                         </div>
                                     </li>
                                     <li className="animate-left-to-right-1">
-                                        <div className={"w-full h-[78px] space-x-[55px] flex mb-[50px]"}>
-                                            <div className="w-[75px] h-[75px]"><Image alt="beactive icon" width="75px" height="75px" src={beActiveIcon} /></div>
-                                            <div className="max-h-[78px] xl:max-w-[350px] 2xl:max-w-[308px] text-sm justify-around">
-                                                <h1 className={"text-2xl font-semibold text-bvsTeal"} >{t('be-active')}</h1>
+                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[55px] flex mb-[30px] xl:mb-[50px]"}>
+                                            <div className="w-[64px] h-[64px] xl:w-[75px] xl:h-[75px]"><Image alt="beactive icon" width="75px" height="75px" src={beActiveIcon} /></div>
+                                            <div className="max-h-[78px] max-w-[300px] xl:max-w-[350px] 2xl:max-w-[308px] text-sm justify-around">
+                                                <h1 className={"text-xl xl:text-2xl font-semibold text-bvsTeal"} >{t('be-active')}</h1>
                                                 <p className="text-[16px] font-normal">{t('be-active-content')}</p>
                                             </div>
                                         </div>
                                     </li>
                                     <li className={"animate-left-to-right-2"}>
-                                        <div className={"w-full h-[78px] space-x-[55px] flex mb-[50px]"}>
-                                            <div className="w-[75px] h-[75px]"><Image alt="keeplearning" src={keepLearningIcon} /></div>
-                                            <div className="max-h-[78px] xl:max-w-[350px] 2xl:max-w-[308px] text-sm justify-around">
-                                                <h1 className={"text-2xl font-semibold text-bvsBrightYellow"} >{t('keep-learning')}</h1>
+                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[55px] flex mb-[30px] xl:mb-[50px]"}>
+                                            <div className="w-[64px] h-[64px] xl:w-[75px] xl:h-[75px]"><Image alt="keeplearning" src={keepLearningIcon} /></div>
+                                            <div className="max-h-[78px] max-w-[300px] xl:max-w-[350px] 2xl:max-w-[308px] text-sm justify-around">
+                                                <h1 className={"text-xl xl:text-2xl font-semibold text-bvsBrightYellow"} >{t('keep-learning')}</h1>
                                                 <p className="text-[16px] font-normal">{t('keep-learning-content')}</p>
                                             </div>
                                         </div>
                                     </li>
                                     <li className={"animate-left-to-right-3"}>
-                                        <div className={"w-full h-[78px] space-x-[55px] flex mb-[50px]"}>
-                                            <div className="w-[75px] h-[75px]"><Image alt="give icon" src={giveIcon} /></div>
-                                            <div className="max-h-[78px] xl:max-w-[350px] 2xl:max-w-[308px] text-sm justify-around">
-                                                <h1 className={"text-2xl font-semibold text-bvsPeach"} >{t(`give`)}</h1>
+                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[55px] flex mb-[30px] xl:mb-[50px]"}>
+                                            <div className="w-[64px] h-[64px] xl:w-[75px] xl:h-[75px]"><Image alt="give icon" src={giveIcon} /></div>
+                                            <div className="max-h-[78px] max-w-[300px] xl:max-w-[350px] 2xl:max-w-[308px] text-sm justify-around">
+                                                <h1 className={"text-xl xl:text-2xl font-semibold text-bvsPeach"} >{t(`give`)}</h1>
                                                 <p className="text-[16px] font-normal">{t('give-content')}</p>
                                             </div>
                                         </div>
                                     </li>
                                     <li className={"animate-left-to-right-4"}>
-                                        <div className={"w-full h-[78px] space-x-[55px] flex mb-[50px]"}>
-                                            <div className="w-[75px] h-[75px]"><Image alt="take notice icon" src={takeNoticeIcon} /></div>
-                                            <div className="max-h-[78px] xl:max-w-[350px] 2xl:max-w-[308px] text-sm justify-around">
-                                                <h1 className={"text-2xl font-semibold text-bvsDrakTeal"} >{t('take-notice')}</h1>
+                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[55px] flex mb-[30px] xl:mb-[50px]"}>
+                                            <div className="w-[64px] h-[64px] xl:w-[75px] xl:h-[75px]"><Image alt="take notice icon" src={takeNoticeIcon} /></div>
+                                            <div className="max-h-[78px] max-w-[300px] xl:max-w-[350px] 2xl:max-w-[308px] text-sm justify-around">
+                                                <h1 className={"text-xl xl:text-2xl font-semibold text-bvsDrakTeal"} >{t('take-notice')}</h1>
                                                 <p className="text-[16px] font-normal">{t('take-notice-content')}</p>
                                             </div>
                                         </div>
