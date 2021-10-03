@@ -108,7 +108,7 @@ export default function Quizzes() {
             <div className="bg-bvsTealLight w-3/4 2xl:w-2/3">
                 <Header />
                 <div className="w-full h-heightBody">
-                    <div className="h-full w-full flex justify-center items-center">
+                    <div className="h-full w-full flex justify-center items-center relative">
                         <div className="relative">
                             <p className="ml-3 text-base font-medium text-black opacity-60">{pagesNumber} / 15</p>
                             <table className="table">
@@ -139,20 +139,23 @@ export default function Quizzes() {
                                     }
                                 </tbody>
                             </table>
-                            { Number(id) !== 1 &&
-                                (
-                                    <Link href={`/quizzes/${(Number(id) - 1)}`} passHref>
-                                        <div className="hover:cursor-pointer hover:scale-110 absolute pl-3 lg:-bottom-28 xl:-bottom-40 h-100px text-black text-opacity-70 text-base flex justify-center items-center">
-                                            <div className="pr-2 flex items-center">
-                                                <Image alt="arrowBack" src={arrowBack}/>
-                                            </div>
-                                            <p>{t('back')}</p>
-                                        </div>
-                                    </Link>
-                                )
-                            }
                         </div>
+                        { Number(id) !== 1 &&
+                            (
+                            <Link href={`/quizzes/${(Number(id) - 1)}`} passHref>
+                                <div className="hover:cursor-pointer hover:opacity-40 pl-3 h-100px text-black text-opacity-70 text-base mt-10 absolute bottom-14 left-0 2xl:left-8">
+                                    <div className="flex items-center">
+                                        <div className="pr-2 flex items-center">
+                                            <Image alt="arrowBack" src={arrowBack}/>
+                                        </div>
+                                        <p>{t('back')}</p>
+                                    </div>
+                                </div>
+                            </Link>
+                            )
+                        }
                     </div>
+                   
                 </div>
             </div>
             <div className="bg-[#FAF5ED] w-1/4 2xl:w-1/3">
