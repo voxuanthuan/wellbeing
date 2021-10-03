@@ -22,7 +22,7 @@ export default function Index() {
     if (inputEl.current.value === undefined || inputEl.current.value.trim() === "") {
       return inputEl.current.focus();
     }
-    router.push('/intro')
+    router.push('/result')
   }
   console.log(i18n.language)
   return (
@@ -78,7 +78,7 @@ export default function Index() {
                   <div className="relative z-10">
                     <div className="absolute top-[110px] sm:top-[120px] md:top-[130px] lg:top-[105px] left-5 lg:left-5 xl:top-28 xl:left-6 2xl:top-36 2xl:left-8 z-20 animate-hide-and-up-2 text-[12px] sm:text-[14px] lg:text-[17px] xl:text-[20px]">
                       <p className="font-medium ">{t('hi')}</p>
-                      <input ref={inputEl} value={name} onChange={(e) => setName(e.target.value)}className="bg-transparent text-bvsPeach font-medium sm:w-[100px] lg:w-[120px] focus:outline-none placeholder-[#FF3750]" placeholder="Your Name" type="text"/>
+                      <input ref={inputEl} value={name} onChange={(e) => setName(e.target.value)} className="focus:placeholder-opacity-40 bg-transparent text-bvsPeach font-medium sm:w-[100px] lg:w-[120px] focus:outline-none placeholder-[#FF3750]" placeholder="Your Name" type="text"/>
                     </div>
                     <div className={"absolute -right-16 top-3 md:-right-6 lg:right-8 lg:top-4 xl:right-10 xl:top-4 2xl:right-8 2xl:top-4 z-20 text-[26px] xl:text-[30px] 2xl:text-[34px] font-semibold animate-hide-and-up-3 w-[310px]"
                       + (i18n.language === "vi-VN" ? "-right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-10 xl:top-3 2xl:right-[35px] text-[26px] xl:text-[27px] 2xl:text-[32px]": "-right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-4 xl:top-4 2xl:right-10" )
