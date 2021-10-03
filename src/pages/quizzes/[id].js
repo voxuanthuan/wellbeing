@@ -110,7 +110,7 @@ export default function Quizzes() {
                 <div className="w-full h-heightBody">
                     <div className="h-full w-full flex justify-center items-center">
                         <div className="relative">
-                            <p className="relative -top-16 left-6 text-base font-medium text-black opacity-60">{pagesNumber} / 15</p>
+                            <p className="ml-3 text-base font-medium text-black opacity-60">{pagesNumber} / 15</p>
                             <table className="table">
                                 <thead>
                                     <tr>
@@ -156,7 +156,7 @@ export default function Quizzes() {
                 </div>
             </div>
             <div className="bg-[#FAF5ED] w-1/3">
-                <div className={"h-full flex justify-center items-center" + (image === quizColor ? " animate-fade-0.5s" : "")}>
+                <div className={"h-full flex justify-center items-center" + (image === quizColor ? " animate-left-to-right-5" : "")}>
                     <div className="w-[387px]">
                         <Image alt="image" src={image}/>
                     </div>

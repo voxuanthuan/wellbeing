@@ -7,17 +7,22 @@ import Header from '../components/Header';
 import titleMascot from '../../public/title-mascots.png';
 import { useAppContext } from '../context';
 import NextArrow from '../../public/arrow_next.svg'
+import {useRouter} from 'next/router';
 
 export default function Index() {
+  const router = useRouter();
   const inputEl = useRef(null);
-  const {setName} = useAppContext();
+  const {name, setName} = useAppContext();
   const { t, i18n } = useTranslation();
-
+  
   function onChangeLanguage(lang) {
     i18n.changeLanguage(lang)
   }
-  const updateName = (e) => {
-    setName(inputEl.current.value);
+  const handleOnClick = () => {
+    if (inputEl.current.value === undefined || inputEl.current.value.trim() === "") {
+      return inputEl.current.focus();
+    }
+    router.push('/intro')
   }
   console.log(i18n.language)
   return (
@@ -57,14 +62,12 @@ export default function Index() {
                   </div>
                  <div>
                   <div className="hidden lg:block">
-                    <Link href="/intro" passHref>
-                        <button onClick={updateName} className="hover:scale-105 w-[130px] h-9 border-1 rounded-[17px] bg-bvsPeach text-white font-medium text-base flex items-center justify-center">
-                            <a>{t('next').toLocaleUpperCase()}</a>
-                            <div className="ml-3">
-                              <Image src={NextArrow}/>
-                            </div>
-                      </button>
-                      </Link>
+                      <button onClick={handleOnClick} className="hover:scale-105 w-[130px] h-9 border-1 rounded-[17px] bg-bvsPeach text-white font-medium text-base flex items-center justify-center">
+                          <a>{t('next').toLocaleUpperCase()}</a>
+                          <div className="ml-3">
+                            <Image src={NextArrow}/>
+                          </div>
+                    </button>
                   </div>
                  </div>
                   
@@ -73,32 +76,30 @@ export default function Index() {
               <div className="flex-1">
                 <div className="w-full h-full flex items-end">
                   <div className="relative z-10">
-                    <div className="absolute top-[110px] sm:top-[120px] md:top-[130px] lg:top-[105px] left-5 lg:left-5 xl:top-32 xl:left-6 2xl:top-36 2xl:left-8 z-20 animate-hide-and-up-2 text-[12px] sm:text-[14px] lg:text-[17px] xl:text-[20px]">
+                    <div className="absolute top-[110px] sm:top-[120px] md:top-[130px] lg:top-[105px] left-5 lg:left-5 xl:top-28 xl:left-6 2xl:top-36 2xl:left-8 z-20 animate-hide-and-up-2 text-[12px] sm:text-[14px] lg:text-[17px] xl:text-[20px]">
                       <p className="font-medium ">{t('hi')}</p>
-                      <input ref={inputEl} className="bg-transparent text-bvsPeach font-medium sm:w-[100px] lg:w-[120px] focus:outline-none placeholder-[#FF3750]" placeholder="Your Name" type="text"/>
+                      <input ref={inputEl} value={name} onChange={(e) => setName(e.target.value)}className="bg-transparent text-bvsPeach font-medium sm:w-[100px] lg:w-[120px] focus:outline-none placeholder-[#FF3750]" placeholder="Your Name" type="text"/>
                     </div>
-                    <div className={"absolute -right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-4 xl:top-4 2xl:right-8 2xl:top-4 z-20 text-[26px] xl:text-[30px] 2xl:text-[34px] font-semibold animate-hide-and-up-3 w-[310px]"
-                      + (i18n.language === "vi-VN" ? "-right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-4 xl:top-4 2xl:right-[35px] 2xl:text-[32px]": "-right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-4 xl:top-4 2xl:right-10" )
+                    <div className={"absolute -right-16 top-3 md:-right-6 lg:right-8 lg:top-4 xl:right-10 xl:top-4 2xl:right-8 2xl:top-4 z-20 text-[26px] xl:text-[30px] 2xl:text-[34px] font-semibold animate-hide-and-up-3 w-[310px]"
+                      + (i18n.language === "vi-VN" ? "-right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-10 xl:top-3 2xl:right-[35px] text-[26px] xl:text-[27px] 2xl:text-[32px]": "-right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-4 xl:top-4 2xl:right-10" )
                     }>
                       <p>{t('weAre')}</p>
                       <p className="text-bvsTeal">{t('areFriend')}</p>
                       <p className="text-bvsTeal">{t('wellbeingBVSI')}</p>
                     </div>
-                    <div className="2xl:w-[766px]">
+                    <div className="w-[600px] xl:w-[650px] 2xl:w-[766px]">
                       <Image alt="title mascot" src={titleMascot}/>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="lg:hidden mt-4 mx-auto pr-[46px]">
-                    <Link href="/intro" passHref>
-                        <button onClick={updateName} className="hover:scale-105 w-[130px] h-9 border-1 rounded-[17px] bg-bvsPeach text-white font-medium text-base flex items-center justify-center">
-                            <a>{t('next').toLocaleUpperCase()}</a>
-                            <div className="ml-3">
-                              <Image src={NextArrow}/>
-                            </div>
-                      </button>
-                    </Link>
+                      <button onClick={handleOnClick} className="hover:scale-105 w-[130px] h-9 border-1 rounded-[17px] bg-bvsPeach text-white font-medium text-base flex items-center justify-center">
+                          <a>{t('next').toLocaleUpperCase()}</a>
+                          <div className="ml-3">
+                            <Image src={NextArrow}/>
+                          </div>
+                    </button>
                   </div>
             </div>
         </div>

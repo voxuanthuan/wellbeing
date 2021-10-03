@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import { useAppContext } from '../context';
 
 import Header from '../components/Header';
 
@@ -14,7 +15,8 @@ import teacherImage from '../../public/help/teacher.png';
 
 
 export default function Connect() {
-    const {t} = useTranslation()
+    const {t} = useTranslation();
+    const {name} = useAppContext();
 
     return (
         <div className="bg-bvsTealLight">
@@ -74,7 +76,7 @@ export default function Connect() {
                             <p className="font-semibold text-sm text-bvsDrakTeal text-center">Theworrybox@bvisivietnam.com​</p>
                         </div>
                     </div>
-                    <p className="font-semibold text-[36px] text-center text-bvsPeach mt-20">{t('toHelp').toLocaleUpperCase()}</p>
+                    <p className="font-semibold text-[36px] text-center text-bvsPeach mt-20">{`${name}, ${t('toHelp').toLocaleUpperCase()}`}</p>
                 </div>
             </div>
         </div>

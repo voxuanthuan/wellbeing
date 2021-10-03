@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import musicImage from '../../public/music-image.svg';
@@ -16,11 +16,6 @@ import connectTag from '../../public/tags/connect.svg';
 
 export default function Connect() {
     const {t} = useTranslation()
-    const elementRef = useRef(null)
-    const onScroll = () => {
-        const scroll = elementRef.current.scrollHeight - elementRef.current.clientHeight;
-        elementRef.current.scrollTo({ top: scroll, behavior:'smooth'});
-    }
     return (
         <div className="h-screen bg-connect bg-no-repeat bg-cover">
             <div className="w-full flex justify-end pt-5 pr-8">

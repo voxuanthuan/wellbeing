@@ -114,14 +114,19 @@ module.exports = {
           transform: 'translateX(0)'
         }
       },
-      'fade-up': {
+      'left-to-right-5': {
         '0%': {
           opacity: '0',
         },
+        '80%': {
+          opacity: '0',
+          transform: 'translateX(20px)'
+        },
         '100%': {
           opacity: '1',
+          transform: 'translateX(0)'
         }
-      }
+      },
     },
     animation: {
       'fade-in-up': 'fade-in-up 0.5s ease-in',
@@ -132,7 +137,7 @@ module.exports = {
       'left-to-right-2': 'left-to-right-2 1.5s ease-out',
       'left-to-right-3': 'left-to-right-3 2s ease-out',
       'left-to-right-4': 'left-to-right-4 2.5s ease-out',
-      'fade-up': 'fade-up 2s ease-out'
+      'left-to-right-5': 'left-to-right-5 2s ease-out',
     },
     maxWidth: {
       '35': '35px'
