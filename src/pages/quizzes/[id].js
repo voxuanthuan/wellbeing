@@ -114,7 +114,7 @@ export default function Quizzes() {
                             <table className="table">
                                 <thead>
                                     <tr>
-                                        <th className="p-3 text-left font-semibold text-[36px] text-bvsPeach underline">{t('question')}</th>
+                                        <th className="p-3 text-left font-semibold text-[18px] xl:text-[30px] 2xl:text-[36px] text-bvsPeach underline">{t('question')}</th>
                                         <th className="p-3 font-normal text-sm text-black text-opacity-80">{t('never')}</th>
                                         <th className="p-3 font-normal text-sm text-black text-opacity-80">{t('onceAMonth')}</th>
                                         <th className="p-3 font-normal text-sm text-black text-opacity-80">{t('onceAWeek')}</th>
