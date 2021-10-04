@@ -22,7 +22,7 @@ export default function Index() {
     if (inputEl.current.value === undefined || inputEl.current.value.trim() === "") {
       return inputEl.current.focus();
     }
-    router.push('/result')
+    router.push('/action-plan')
   }
   console.log(i18n.language)
   return (

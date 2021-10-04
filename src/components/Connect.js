@@ -24,11 +24,11 @@ export default function Connect() {
                     <div className="ml-3"><Image alt="connect icon" src={connectTag}/></div>
                 </div>
             </div>
-            <div className="flex justify-center items-center w-full h-full">
+            <div className="flex justify-center w-full h-full">
                <div>
-                    <div className="h-heightBody w-full flex">
-                        <div className="w-1/6 h-5/6 flex flex-col pl-32 pt-24">
-                            <div>
+                    <div className="h-heightBody w-full flex items-center">
+                        <div className="w-1/6 h-5/6 flex flex-col pl-32 pt-24 justify-center">
+                            <div className="h-[80px]">
                                 <Image alt="connect icon" width="105px" src={connectIcon}/>
                             </div>
                             <div className="mt-48">
@@ -42,7 +42,7 @@ export default function Connect() {
 
                             </div>
                         </div>
-                        <div className="h-full w-3/6 max-w-[828px]">
+                        <div className="h-full w-3/6 max-w-[828px] flex flex-col justify-center">
                             <h1 className="font-semibold text-4xl mt-20" dangerouslySetInnerHTML={{__html: t('connectDetail')}}/>
                             <div className="mt-20">
                                 <h3 className="font-medium text-[18px] mb-10">{t('whynot')}</h3>
@@ -88,7 +88,7 @@ export default function Connect() {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-2/6 h-full">
+                        <div className="w-2/6 h-full flex flex-col justify-center">
                             <div className="mt-20">
                                 <Image alt="music image" src={musicImage}/>
                             </div>

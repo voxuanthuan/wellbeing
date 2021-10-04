@@ -28,11 +28,11 @@ export default function TakeNotice() {
                     <div className="ml-3"><Image alt="beactive tag" src={takeNoticeTag}/></div>
                 </div>
             </div>
-            <div className="w-full flex justify-center items-center">
+            <div className="w-full flex justify-center">
                 <div>
-                    <div className="h-heightBody w-full flex">
-                        <div className="w-1/6 h-5/6 flex flex-col pl-32 pt-24">
-                            <div>
+                    <div className="h-heightBody w-full flex items-center">
+                        <div className="w-1/6 h-5/6 flex flex-col justify-center pl-32 pt-24">
+                            <div className="h-[160px]">
                                 <Image alt="beactive icon" src={takeNoticeIcon}/>
                             </div>
                             <div className="mt-28">
@@ -47,7 +47,7 @@ export default function TakeNotice() {
                             </div>
 
                         </div>
-                        <div className="h-full w-3/6 max-w-[828px]">
+                        <div className="h-full w-3/6 max-w-[828px] flex flex-col justify-center">
                             <h1 className="font-semibold text-4xl mt-20" dangerouslySetInnerHTML={{__html: t('takeNoticeDetail')}}></h1>
                             <div className="mt-20">
                                 <h3 className="font-medium text-[18px] mb-10">{t('whynot')}</h3>
@@ -101,7 +101,7 @@ export default function TakeNotice() {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-2/6 h-full">
+                        <div className="w-2/6 h-full flex flex-col justify-center">
                             <div className="mt-20">
                                 <Image alt="music image" src={musicImage}/>
                             </div>
