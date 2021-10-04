@@ -22,62 +22,64 @@ export default function Connect() {
         <div className="bg-bvsTealLight">
             <div className="relative">
                 <Header />
-                <div className="h-heightBody w-full pt-40">
-                   <div className="w-full mx-auto  text-center">
-                    <p className="font-semibold text-[24px] mx-auto w-[740px] text-bvsNavy">{t('helpTitle')}</p>
+                <div className="h-heightBody w-full flex justify-center items-center">
+                   <div className="w-full">
+                    <div className="w-full mx-auto  text-center">
+                        <p className="font-semibold text-[24px] mx-auto w-[740px] text-bvsNavy pt-5">{t('helpTitle')}</p>
+                        </div>
+                        <div className="flex justify-around mt-20 w-[900px] mx-auto space-x-12">
+                            <div className="flex flex-col items-center max-w-[204px]">
+                                <div className="hover:scale-110 w-[151px] relative">
+                                    <div className="w-full h-full">
+                                        <Image alt="frame image" src={porTraitFrame}/>
+                                    </div>
+                                    <div className="absolute z-10 top-[22px] right-[36px]">
+                                        <Image alt="teacher image" src={teacherImage}/>
+                                    </div>
+                                </div>
+                                <p className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">{t('formTutor')}</p>
+                            </div>
+                            <div className="flex flex-col items-center max-w-[204px] relative">
+                                <div className="hover:scale-110 w-[151px] relative">
+                                    <div className="w-full h-full">
+                                        <Image alt="frame image" src={porTraitFrame}/>
+                                    </div>
+                                    <div className="absolute z-10 top-[20px] right-[33px]">
+                                        <Image alt="teacher image" src={headImage}/>
+                                    </div>
+                                </div>
+                                <p className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">{t('headOfHouse')}</p>
+                            </div>
+                            <div className="flex flex-col items-center max-w-[204px]">
+                                <div className="hover:scale-105 w-[151px] relative overflow-hidden">
+                                    <div className="w-full h-full">
+                                        <Image alt="frame image" src={porTraitFrame}/>
+                                    </div>
+                                    <div className="absolute z-10 top-[7px] right-[19px]">
+                                        <Image alt="Mr Luke Curran" src={mrLukeCurranImage}/>
+                                    </div>
+                                </div>
+                                <span className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">{t('mrLukeCurran')}
+                                </span>
+                                <span className="font-semibold text-sm text-bvsDrakTeal text-center">Luke.Curran@bvisivietnam.com 
+                                </span>
+                            </div>
+                            <div className="flex flex-col items-center max-w-[204px]">
+                                <div className="hover:scale-110 w-[151px] relative">
+                                    <div className="w-full h-full">
+                                        <Image alt="frame image" src={porTraitFrame}/>
+                                    </div>
+                                    <div className="absolute z-10 top-[58px] right-[27px]">
+                                        <Image alt="Mr Luke Curran" src={mailBoxImage}/>
+                                    </div>
+                                </div>
+                                <p className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">{t('worryBox')}</p>
+                                <p className="font-semibold text-sm text-bvsDrakTeal text-center">Theworrybox@bvisivietnam.com​</p>
+                            </div>
+                        </div>
+                        <p className="font-semibold text-[36px] text-center text-bvsPeach mt-[60px]">{`${name}, ${t('toHelp').toLocaleUpperCase()}`}</p>
                     </div>
-                    <div className="flex justify-around mt-24 w-[900px] mx-auto space-x-12">
-                        <div className="flex flex-col items-center max-w-[204px]">
-                            <div className="hover:scale-110 w-[151px] relative">
-                                <div className="w-full h-full">
-                                    <Image alt="frame image" src={porTraitFrame}/>
-                                </div>
-                                <div className="absolute z-10 top-[24px] right-[36px]">
-                                    <Image alt="teacher image" src={teacherImage}/>
-                                </div>
-                            </div>
-                            <p className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">{t('formTutor')}</p>
-                        </div>
-                        <div className="flex flex-col items-center max-w-[204px] relative">
-                            <div className="hover:scale-110 w-[151px] relative">
-                                <div className="w-full h-full">
-                                    <Image alt="frame image" src={porTraitFrame}/>
-                                </div>
-                                <div className="absolute z-10 top-[20px] right-[33px]">
-                                    <Image alt="teacher image" src={headImage}/>
-                                </div>
-                            </div>
-                            <p className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">{t('headOfHouse')}</p>
-                        </div>
-                        <div className="flex flex-col items-center max-w-[204px]">
-                            <div className="hover:scale-105 w-[151px] relative overflow-hidden">
-                                <div className="w-full h-full">
-                                    <Image alt="frame image" src={porTraitFrame}/>
-                                </div>
-                                <div className="absolute z-10 top-[7px] right-[19px]">
-                                    <Image alt="Mr Luke Curran" src={mrLukeCurranImage}/>
-                                </div>
-                            </div>
-                            <span className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">{t('mrLukeCurran')}
-                            </span>
-                            <span className="font-semibold text-sm text-bvsDrakTeal text-center">Luke.Curran@bvisivietnam.com 
-                            </span>
-                        </div>
-                        <div className="flex flex-col items-center max-w-[204px]">
-                            <div className="hover:scale-110 w-[151px] relative">
-                                <div className="w-full h-full">
-                                    <Image alt="frame image" src={porTraitFrame}/>
-                                </div>
-                                <div className="absolute z-10 top-[58px] right-[27px]">
-                                    <Image alt="Mr Luke Curran" src={mailBoxImage}/>
-                                </div>
-                            </div>
-                            <p className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">{t('worryBox')}</p>
-                            <p className="font-semibold text-sm text-bvsDrakTeal text-center">Theworrybox@bvisivietnam.com​</p>
-                        </div>
-                    </div>
-                    <p className="font-semibold text-[36px] text-center text-bvsPeach mt-20">{`${name}, ${t('toHelp').toLocaleUpperCase()}`}</p>
-                </div>
+                   </div>
             </div>
         </div>
     )
