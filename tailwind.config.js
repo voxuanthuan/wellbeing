@@ -118,10 +118,6 @@ module.exports = {
         '0%': {
           opacity: '0',
         },
-        '80%': {
-          opacity: '0',
-          transform: 'translateX(20px)'
-        },
         '100%': {
           opacity: '1',
           transform: 'translateX(0)'
@@ -137,7 +133,7 @@ module.exports = {
       'left-to-right-2': 'left-to-right-2 1.5s ease-out',
       'left-to-right-3': 'left-to-right-3 2s ease-out',
       'left-to-right-4': 'left-to-right-4 2.5s ease-out',
-      'left-to-right-5': 'left-to-right-5 2s ease-out',
+      'left-to-right-5': 'left-to-right-5 0.8s ease-in',
     },
     maxWidth: {
       '35': '35px'

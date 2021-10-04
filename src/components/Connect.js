@@ -27,26 +27,32 @@ export default function Connect() {
             <div className="flex justify-center w-full h-full">
                <div>
                     <div className="h-heightBody w-full flex items-center">
-                        <div className="w-1/6 h-full 2xl:h-5/6 flex flex-col items-end pt-24 justify-center">
+                        <div className="w-1/6 h-full flex items-center justify-end">
                             <div>
-                                <div className="h-[100px] 2xl:h-[80px] flex justify-start min-w-[75px]">
-                                    <Image alt="connect icon" width="105px" src={connectIcon}/>
-                                </div>
-                                <div className="mt-40">
-                                    <div className="h-[265px] w-[2px]">
-                                        <div className="bg-black opacity-25 h-[168px]"></div>
-                                        <div className="bg-bvsPeach h-[79px]"></div>
-                                        <div className="relative w-full block">
-                                            <h1 className="w-full text-bvsPeach text-xs font-medium top-24 absolute transform -rotate-90 origin-center whitespace-nowrap">{t('connect').toLocaleUpperCase()}</h1>
+                                <div className="lg:h-[480px] xl:h-[550px] flex flex-col justify-around items-start">
+                                    <div className="flex justify-start">
+                                        <div className="2xl:h-[80px] min-w-[105px]">
+                                            <Image alt="connect icon" src={connectIcon}/>
                                         </div>
                                     </div>
+                                    <div>
+                                        <div className="h-[265px] w-[2px] flex flex-col">
+                                            <div>
+                                                <div className="bg-black opacity-25 h-[168px]"></div>
+                                                <div className="bg-bvsPeach h-[79px]"></div>
+                                            </div>
+                                            <div className="w-full block">
+                                                <h1 className="w-full text-bvsPeach text-xs font-medium mt-20 transform -rotate-90 origin-center whitespace-nowrap">{t('connect').toLocaleUpperCase()}</h1>
+                                            </div>
+                                        </div>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div className="h-full w-3/6 max-w-[828px] flex flex-col justify-center">
-                            <h1 className="font-semibold text-3xl 2xl:text-4xl mt-20" dangerouslySetInnerHTML={{__html: t('connectDetail')}}/>
-                            <div className="mt-20">
+                            <h1 className="font-semibold text-2xl xl:text-3xl 2xl:text-4xl mt-20" dangerouslySetInnerHTML={{__html: t('connectDetail')}}/>
+                            <div className="mt-10 xl:mt-20">
                                 <h3 className="font-medium text-[18px] mb-10">{t('whynot')}</h3>
                                 <div className="ml-5 text-sm font-normal text-black text-opacity-70 leading-[17px]">
                                     <ul>

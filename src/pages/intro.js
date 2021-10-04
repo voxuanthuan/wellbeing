@@ -4,7 +4,7 @@ import {useTranslation} from "react-i18next";
 import Header from '../components/Header';
 import Link from 'next/link';
 
-import connectIcon from '../../public/connect/connect_dot.svg';
+import connectIcon from '../../public/connect/connect-dot-small.svg';
 import beActiveIcon from '../../public/be-active/be_active_dot.svg';
 import keepLearningIcon from '../../public/keep-learning/keep_learning_dot.svg';
 import giveIcon from '../../public/give/give_dot.svg';

@@ -33,26 +33,33 @@ export default function KeepLearning() {
             <div className="h-full w-full flex justify-center">
                 <div>
                     <div className="h-heightBody w-full flex items-center">
-                        <div className="w-1/6 h-5/6 flex flex-col justify-center pl-32 pt-24">
-                            <div className="h-[140px]">
-                                <Image alt="beactive icon" src={keepLearningIcon}/>
-                            </div>
-                            <div className="mt-32">
-                                <div className="h-[265px] w-[2px]">
-                                    <div className="bg-black opacity-25 h-[168px]"></div>
-                                    <div className="bg-bvsBrightYellow h-[79px]"></div>
-                                    <div className="relative w-full block">
-                                    <h1 className="w-full text-bvsBrightYellow text-xs font-medium top-24 absolute transform -rotate-90 origin-center whitespace-nowrap">{t('be-active').toLocaleUpperCase()}</h1>
+                        <div className="w-1/6 h-full flex items-center justify-end">
+                                <div>
+                                    <div className="lg:h-[480px] xl:h-[550px] flex flex-col justify-around items-start">
+                                        <div className="flex justify-start">
+                                            <div className="2xl:h-[80px] min-w-[105px]">
+                                                <Image alt="connect icon" src={keepLearningIcon}/>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="h-[265px] w-[2px] flex flex-col">
+                                                <div>
+                                                    <div className="bg-black opacity-25 h-[168px]"></div>
+                                                    <div className="bg-bvsBrightYellow h-[79px]"></div>
+                                                </div>
+                                                <div className="w-full block">
+                                                    <h1 className="w-full text-bvsBrightYellow text-xs font-medium mt-20 transform -rotate-90 origin-center whitespace-nowrap">{t('keep-learning').toLocaleUpperCase()}</h1>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
-
                             </div>
-
-                        </div>
                         <div className="h-full w-3/6 max-w-[828px] flex flex-col justify-center">
-                            <h1 className="font-semibold text-4xl mt-20" dangerouslySetInnerHTML={{__html: t('keepLeaningDetail')}}></h1>
-                            <div className="mt-20">
-                                <h3 className="font-medium text-[18px] mb-10">{t('whynot')}</h3>
+                            <h1 className="font-semibold text-2xl xl:text-3xl 2xl:text-4xl mt-20" dangerouslySetInnerHTML={{__html: t('keepLeaningDetail')}}></h1>
+                            <div className="mt-10 xl:mt-20">
+                                <h3 className="font-medium text-[18px] mb-5 xl:mb-10">{t('whynot')}</h3>
                                 <div className="flex text-sm font-normal text-black text-opacity-70">
                                 <ul className="ml-5">
                                         <li>
@@ -119,7 +126,7 @@ export default function KeepLearning() {
                             <div className="mt-20">
                                 <Image alt="music image" src={musicImage}/>
                             </div>
-                            <div className="w-[400px] 2xl:w-[450px] mt-32 2xl:mt-20 relative right-16 2xl:right-20">
+                            <div className="w-[300px] xl:w-[400px] 2xl:w-[450px] mt-16 xl:mt-32 2xl:mt-20 relative xl:right-16 2xl:right-20">
                                 <Image alt="beactive image" src={keepLearningImage}/>
                             </div>
                         </div>

@@ -50,7 +50,7 @@ export default function Connect() {
                             <p className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">{t('headOfHouse')}</p>
                         </div>
                         <div className="flex flex-col items-center max-w-[204px]">
-                            <div className="hover:scale-110 w-[151px] relative overflow-hidden">
+                            <div className="hover:scale-105 w-[151px] relative overflow-hidden">
                                 <div className="w-full h-full">
                                     <Image alt="frame image" src={porTraitFrame}/>
                                 </div>
