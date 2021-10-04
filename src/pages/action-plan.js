@@ -127,7 +127,7 @@ export default function ActionPlan() {
                                     </div>
                                 </div>
 
-                                <div className="flex mt-[60px] items-center">
+                                <div className="flex mt-[30px] 2xl:mt-[60px] items-center">
                                         <Link href="/help" passHref>
                                             <button className="hover:scale-105 w-[130px] h-[39px] bg-bvsPeach font-medium rounded-[17px] text-white text-base"><a>{t('needHelp').toLocaleUpperCase()}</a></button>
                                         </Link>
@@ -143,10 +143,10 @@ export default function ActionPlan() {
                     <p className="text-[36px] font-semibold text-bvsNavy max-w-[658px] leading-[44px]">{t('tips')}</p>
                 </div>
               <div className="relative w-full">
-                    <div className="absolute top-[160px] right-64">
+                    <div className="absolute top-[140px] 2xl:top-[160px] right-64">
                         <Image src={introductionImage}/>
                     </div>
-                    <div className="absolute top-[90px] right-0">
+                    <div className="absolute top-[70px] 2xl:top-[90px] right-0">
                         <Image src={musicImage}/>
                     </div>
                 </div>
