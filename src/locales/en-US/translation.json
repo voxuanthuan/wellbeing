@@ -127,9 +127,8 @@
     "wellbeingMean": "Wellbeing is about feeling good both mentally and physically.  There are 5 things we can all do to really help our wellbeing",
     "takeQuiz": "take quiz",
     "hintWellbeing": "So how good is you Wellbeing?  Click here to do Wellbeing Buddies’s checkup",
-
-    "weAre": "We are",
-    "areFriend": "BVIS WellBeing",
+    "weAre": "I'm Wellie and </br>We are <span class='text-bvsTeal'>BVIS</span></br><span class='text-bvsTeal'>WellBeing Buddies</span>",
+    "areFriend": "We are BVIS WellBeing",
     "wellbeingBVSI": "Buddies",
     "next": "Next",
     "back": "Back",

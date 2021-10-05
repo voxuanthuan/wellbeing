@@ -24,7 +24,6 @@ export default function Index() {
     }
     router.push('/action-plan')
   }
-  console.log(i18n.language)
   return (
     <div className="bg-[#B4EBF5] relative">
       <Header/>
@@ -74,16 +73,14 @@ export default function Index() {
               <div className="flex-1">
                 <div className="w-full h-full flex items-end">
                   <div className="relative z-10">
-                    <div className="absolute top-[110px] sm:top-[120px] md:top-[130px] lg:top-[105px] left-5 lg:left-5 xl:top-28 xl:left-6 2xl:top-36 2xl:left-8 z-20 animate-hide-and-up-2 text-[12px] sm:text-[14px] lg:text-[17px] xl:text-[20px]">
-                      <p className="font-medium ">{t('hi')}</p>
+                    <div className={"absolute top-[110px] sm:top-[120px] md:top-[130px] lg:top-[105px] left-5 lg:left-5 2xl:left-6 z-20 animate-hide-and-up-2 text-[12px] sm:text-[14px] lg:text-[17px] " + (i18n.language === "vi-VN" ? "xl:text-[14px] 2xl:text-[16px] 2xl:top-32 xl:top-28 xl:left-6" : " xl:text-[16px] 2xl:text-[19px] 2xl:top-36 xl:top-28 xl:left-5")}>
+                      <p className="font-medium "dangerouslySetInnerHTML={{__html: t('hi')}} />
                       <input ref={inputEl} value={name} onChange={(e) => setName(e.target.value)} className="focus:placeholder-opacity-40 bg-transparent text-bvsPeach font-medium sm:w-[100px] lg:w-[120px] focus:outline-none placeholder-[#FF3750]" placeholder="Your Name" type="text"/>
                     </div>
-                    <div className={"absolute -right-16 top-3 md:-right-6 lg:right-8 lg:top-4 xl:right-10 xl:top-4 2xl:right-8 2xl:top-4 z-20 text-[26px] xl:text-[30px] 2xl:text-[34px] font-semibold animate-hide-and-up-3 w-[310px]"
-                      + (i18n.language === "vi-VN" ? "-right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-10 xl:top-3 2xl:right-[35px] text-[26px] xl:text-[27px] 2xl:text-[32px]": "-right-16 top-3 md:-right-6 lg:-right-14 lg:top-4 xl:-right-4 xl:top-4 2xl:right-10" )
+                    <div className={"absolute font-semibold animate-hide-and-up-3 w-[310px] "
+                      + (i18n.language === "vi-VN" ? " -right-16 top-3 md:-right-6 lg:right-8 lg:top-4 xl:-right-10 xl:top-2 2xl:right-0 2xl:top-3 z-20 text-[24px] xl:text-[22px] 2xl:text-[27px]": " -right-16 top-3 md:-right-6 lg:right-8 lg:top-4 xl:-right-9 xl:top-6 2xl:right-0 2xl:top-5 z-20 text-[26px] xl:text-[25px] 2xl:text-[28px]" )
                     }>
-                      <p>{t('weAre')}</p>
-                      <p className="text-bvsTeal">{t('areFriend')}</p>
-                      <p className="text-bvsTeal">{t('wellbeingBVSI')}</p>
+                      <p dangerouslySetInnerHTML={{__html: t('weAre')}} />
                     </div>
                     <div className="w-[600px] xl:w-[650px] 2xl:w-[766px]">
                       <Image alt="title mascot" src={titleMascot}/>

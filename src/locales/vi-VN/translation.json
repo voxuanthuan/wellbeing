@@ -1,5 +1,5 @@
 {
-    "hi": "Xin Chào, mình là Happie",
+    "hi": "Xin Chào, </br>mình là Happie",
     "connect": "Kết nối",
     "connect-content": "Dành thời gian tương tác với mọi người xung quanh - ở nhà, ở trường hoặc trong cộng đồng.",
     "be-active": "Năng động",
@@ -130,7 +130,8 @@
     "takeQuiz": "Kiểm tra",
     "hintWellbeing": "Sức khỏe tinh thần của bạn đang ở mức độ nào? Hãy nhấn vào đây để tìm hiểu cùng Những người bạn Wellbeing BVIS nhé.",
 
-    "weAre": "Chúng mình là",
+    "weAre": "Mình là Wellie. </br>Chúng mình là</br> <span class='text-bvsTeal'>Những người bạn</span></br><span class='text-bvsTeal'>WellBeing Buddies</span>",
+    
     "areFriend": " Những người bạn",
     "wellbeingBVSI": "Wellbeing BVIS",
     "next": "Tiếp theo",
