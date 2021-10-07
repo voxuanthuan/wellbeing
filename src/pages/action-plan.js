@@ -13,6 +13,7 @@ import TakeNotice from '../components/TakeNotice';
 
 import quoteIcon from '../../public/quote.svg';
 import arrowBack from '../../public/arrow_back.svg';
+import arrowButtonDown from '../../public/scroll-down-button.svg';
 
 import connectIconSmall from '../../public/connect/connect-dot-small.svg';
 import beActiveIconSmall from '../../public/be-active/be-active-dot-small.svg';
@@ -26,7 +27,75 @@ import introductionImage from '../../public/introduction.png';
 
 export default function ActionPlan() {
     const {t} = useTranslation();
-    const {name} = useAppContext();
+    const {
+        connectScore,
+        takeNoticeScore,
+        keepLearningScore,
+        beActiveScore,
+        giveScore,
+        name
+    } = useAppContext();
+    const renderConnectByScore = (score, type) => {
+        if (type === 'connect') {
+            if (score <= 3) {
+                return t('connectGuideTrySomeThing');
+            } else if (score <= 6) {
+                return t('connectGuideProgress');
+            } else if (score <= 9) {
+                return t('connectGuideGood');
+            } else if (score <= 12) {
+                return t('connectGuideWellBeing');
+            }
+        }
+
+        if (type === 'be-active') {
+            if (score <= 3) {
+                return t('beActiveGuideTrySomeThing');
+            } else if (score <= 6) {
+                return t('beActiveGuideProgress');
+            } else if (score <= 9) {
+                return t('beActiveGuideGood');
+            } else if (score <= 12) {
+                return t('beActiveGuideWellBeing');
+            }
+        }
+
+        if (type === 'keep-learning') {
+            if (score <= 3) {
+                return t('keepLearningGuideTrySomeThing');
+            } else if (score <= 6) {
+                return t('keepLearningGuideProgress');
+            } else if (score <= 9) {
+                return t('keepLearningGuideGood');
+            } else if (score <= 12) {
+                return t('keepLearningGuideWellBeing');
+            }
+        }
+
+        if (type === 'give') {
+            if (score <= 3) {
+                return t('givingGuideTrySomeThing');
+            } else if (score <= 6) {
+                return t('givingGuideProgress');
+            } else if (score <= 9) {
+                return t('givingGuideGood');
+            } else if (score <= 12) {
+                return t('givingGuideWellBeing');
+            }
+        }
+        if (type === 'take-notice') {
+            if (score <= 3) {
+                return t('takeNoticeGuideTrySomeThing');
+            } else if (score <= 6) {
+                return t('takeNoticeGuideProgress');
+            } else if (score <= 9) {
+                return t('takeNoticeGuideGood');
+            } else if (score <= 12) {
+                return t('takeNoticeGuideWellBeing');
+            }
+        }
+        
+    }
     return (
         <div className="h-screen">
             <div className="bg-[#FAF5ED] w-full h-full relative">
@@ -35,15 +104,15 @@ export default function ActionPlan() {
                     <div className="h-full flex">
                         <div className="w-1/3 h-full flex justify-center items-center">
                             <div className="w-full">
-                                <div className=" mt-10 ml-10 xl:mt-40 relative">
-                                    <div className="absolute -top:3 -left-3 xl:-top-4 xl:-left-4 w-[42px] h-[31px] xl:w-[81px] xl:h-[71px]">
+                                <div className=" mt-10 ml-10 2xl:mt-40 relative">
+                                    <div className="absolute -top:3 -left-3 xl:-top-4 xl:-left-4 w-[42px] h-[31px] 2xl:w-[81px] 2xl:h-[71px]">
                                         <Image alt="quote image" src={quoteIcon} />
                                     </div>
                                     <p className="text-black text-opacity-60 relative z-10">{t('topTip')}</p>
-                                    <p className="max-w-[80%] xl:max-w-[207px] text-[20px] xl:text-[24px] font-semibold text-bvsTeal relative z-10">{t('topTipContent')}</p>
+                                    <p className="max-w-[80%] xl:max-w-[207px] text-[20px] 2xl:text-[24px] font-semibold text-bvsTeal relative z-10">{t('topTipContent')}</p>
                                 </div>
-                                <div className="mt-20 xl:mt-40 flex justify-end">
-                                    <p className="w-full text-[#1E96A5] text-[20px] xl:text-[24px] font-semibold  max-w-[80%] xl:max-w-[327px] leading-7 relative z-10">{t('importantThing')}</p>
+                                <div className="mt-20 2xl:mt-40 flex justify-end">
+                                    <p className="w-full text-[#1E96A5] text-[20px] 2xl:text-[24px] font-semibold  max-w-[80%] xl:max-w-[327px] leading-7 relative z-10">{t('importantThing')}</p>
                                 </div>
                                 <Link href="/result" passHref>
                                         <button className="w-full hover:scale-105 hover:opacity-40 text-black text-opacity-60 mt-14 xl:mt-20">
@@ -60,10 +129,10 @@ export default function ActionPlan() {
                         <div className="w-2/3 bg-bvsTealLight relative top-0">
                         <div className="h-screen w-full flex justify-center items-center">
                             <div className="w-full ml-5 xl:ml-20">
-                                <p className="mt-0 xl:mt-[20px] mb-[5px] xl:mb-[13px] text-[20px] font-medium">{`${name}${t('suffix')}`}</p>
-                                <h1 className="text-bvsPeach font-bold text-[30px] xl:text-[36px] mb-[15px] xl:mb-[81px]" dangerouslySetInnerHTML={{__html: t('wellbeingActionPlan').toLocaleUpperCase()}}></h1>
+                                <p className="mt-0 2xl:mt-[20px] mb-[5px] xl:mb-[13px] text-[20px] font-medium">{`${name}${t('suffix')}`}</p>
+                                <h1 className="text-bvsPeach font-bold text-[24px] 2xl:text-[36px] mb-[15px] 2xl:mb-[81px]" dangerouslySetInnerHTML={{__html: t('wellbeingActionPlan').toLocaleUpperCase()}}></h1>
                                     <div>
-                                        <div className="flex mb-[70px] justify-around xl:justify-start">
+                                        <div className="flex mb-[44px] 2xl:mb-[70px] justify-around xl:justify-start">
                                             <div className="max-w-[360px] h-[110px] relative">
                                                 <div className="flex">
                                                     <div className="hidden xl:block w-[55px] h-[55px] mt-1">
@@ -77,7 +146,7 @@ export default function ActionPlan() {
                                                             <p className="text-2xl text-bvsNavy font-medium pl-2 xl:pl-0">{t('connect')}</p>
 
                                                         </div>
-                                                        <p className="text-bvsDrakTeal text-base font-normal  max-w-[300px] xl:max-w-[280px]">{t('connectGuide')}</p>
+                                                        <p className="text-bvsDrakTeal text-base font-normal  max-w-[300px] xl:max-w-[280px]">{renderConnectByScore(connectScore, "connect")}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -94,14 +163,14 @@ export default function ActionPlan() {
                                                             <p className="text-2xl text-bvsNavy font-medium pl-2 xl:pl-0">{t('be-active')}</p>
                                                         </div>
                                                         <p className="text-bvsDrakTeal text-base font-normal  max-w-[300px] xl:max-w-[280px]">
-                                                            {t('beActiveGuide')}
+                                                            {renderConnectByScore(beActiveScore, "be-active")}
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
                                             
                                         </div>
-                                        <div className="flex mb-20 justify-around xl:justify-start">
+                                        <div className="flex mb-[50px] 2xl:mb-20 justify-around xl:justify-start">
                                             <div className="max-w-[360px] h-[110px] relative ">
                                                 <div className="flex">
                                                     <div className="hidden xl:block w-[55px] h-[55px] mt-1">
@@ -114,7 +183,7 @@ export default function ActionPlan() {
                                                             </div>
                                                             <p className="text-2xl text-bvsNavy font-medium mb-0 xl:mb-2 pl-2 xl:pl-0">{t('keep-learning')}</p>
                                                         </div>
-                                                        <p className="text-bvsDrakTeal text-base font-normal  max-w-[300px] xl:max-w-[280px]">{t('keepLearningGuide')}</p>
+                                                        <p className="text-bvsDrakTeal text-base font-normal  max-w-[300px] xl:max-w-[280px]">{renderConnectByScore(beActiveScore, "keep-learning")}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -131,15 +200,15 @@ export default function ActionPlan() {
                                                             <p className="text-2xl text-[#003255] font-medium mb-0 xl:mb-2 pl-2 xl:pl-0">{t('give')}</p>
                                                         </div>
                                                         <p className="text-bvsDrakTeal text-base font-normal  max-w-[300px] xl:max-w-[280px]">
-                                                            {t('givingGuide')}
+                                                            {renderConnectByScore(giveScore, "give")}
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
                                             
                                         </div>
-                                        <div className="flex justify-around xl:justify-start">
-                                            <div className="max-w-[360px] h-[110px] relative">
+                                        <div className="flex">
+                                            <div className="max-w-[360px] h-[110px] relative flex-1">
                                                 <div className="flex">
                                                         <div className="hidden xl:block w-[55px] h-[55px] mt-1">
                                                                 <Image alt="take notice icon" src={takeNoticeIconSmall}/>
@@ -151,26 +220,27 @@ export default function ActionPlan() {
                                                             </div>
                                                             <p className="text-2xl text-bvsNavy font-medium mb-0 xl:mb-2 pl-2 xl:pl-0">{t('take-notice')}</p>
                                                         </div>
-                                                        <p className="text-bvsDrakTeal text-base font-normal max-w-[300px] xl:max-w-[280px]">{t('takeNoticeGuide')}</p>
+                                                        <p className="text-bvsDrakTeal text-base font-normal max-w-[300px] xl:max-w-[280px]">{renderConnectByScore(takeNoticeScore, "take-notice")}</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="max-w-[280px] h-[110px] relative">
-                                                <div className="flex flex-col items-center xl:hidden">
-                                                    <p className="text-[14px] text-black text-opacity-60 max-w-[338px] text-center">{t('clickGotHelp')}</p>
-                                                    <Link href="/help" passHref>
-                                                        <button className="hover:scale-105 w-[130px] h-[39px] bg-bvsPeach font-medium rounded-[17px] text-white text-base"><a>{t('needHelp').toLocaleUpperCase()}</a></button>
-                                                    </Link>
+                                            <div className="w-auto xl:min-w-[350px] h-[110px] relative flex-1 flex justify-center items-end">
+                                                <div className=" flex items-center flex-col">
+                                                    <div>
+                                                        <Image alt="arrow-down-button" src={arrowButtonDown}/>
+                                                    </div>
+                                                    <p className="max-w-[118px] text-center text-black text-opacity-60 text-sm">{t('scrollDown')}</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                <div className="hidden xl:flex mt-[30px] 2xl:mt-[60px] items-center">
+                                {/* <div className="hidden xl:flex mt-[30px] 2xl:mt-[60px] items-center">
                                     <Link href="/help" passHref>
                                         <button className="hover:scale-105 w-[130px] h-[39px] bg-bvsPeach font-medium rounded-[17px] text-white text-base"><a>{t('needHelp').toLocaleUpperCase()}</a></button>
                                     </Link>
                                     <p className="text-[16px] text-black text-opacity-60 max-w-[338px] ml-10">{t('clickGotHelp')}</p>
-                                </div>
+                                </div> */}
+
                             </div>
                             </div>
                         </div>
@@ -178,14 +248,14 @@ export default function ActionPlan() {
                 </div>
             </div>
             <div className="h-full w-full bg-bvsTealLight">
-                <div className="w-full flex justify-center pt-14 xl:pt-28">
-                    <p className="text-[36px] font-semibold text-bvsNavy max-w-[658px] leading-[44px]">{t('tips')}</p>
+                <div className="w-full flex justify-center pt-12 2xl:pt-28">
+                    <p className="text-[30px] font-semibold text-bvsNavy max-w-[700px] 2xl:max-w-[658px] leading-[44px]">{t('tips')}</p>
                 </div>
               <div className="relative w-full">
-                    <div className="absolute top-[140px] 2xl:top-[160px] right-56 xl:right-64 w-[360px] xl:w-auto">
+                    <div className="absolute top-[140px] 2xl:top-[160px] right-56 xl:right-64 w-[360px] 2xl:w-auto">
                         <Image alt="introduction image" src={introductionImage}/>
                     </div>
-                    <div className="absolute top-[70px] 2xl:top-[90px] right-0 w-[380px] xl:w-auto">
+                    <div className="absolute top-[70px] 2xl:top-[90px] right-0 w-[380px] 2xl:w-auto">
                         <Image alt="music" src={musicImage}/>
                     </div>
                 </div>

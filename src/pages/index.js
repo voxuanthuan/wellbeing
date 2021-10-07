@@ -2,7 +2,6 @@ import React, {useRef} from 'react';
 import Head from 'next/head'
 import { useTranslation } from "react-i18next";
 import Image from 'next/image';
-import Link from 'next/link';
 import Header from '../components/Header';
 import titleMascot from '../../public/title-mascots.png';
 import { useAppContext } from '../context';
@@ -22,7 +21,7 @@ export default function Index() {
     if (inputEl.current.value === undefined || inputEl.current.value.trim() === "") {
       return inputEl.current.focus();
     }
-    router.push('/intro')
+    router.push('/action-plan')
   }
   return (
     <div className="bg-[#B4EBF5] relative">
@@ -32,7 +31,7 @@ export default function Index() {
       </Head>
       <div className="w-full h-heightBody">
         <div className="pl-16 xl:pl-48 h-full flex flex-col justify-around">
-          <div className="font-bold text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl pt-10">
+          <div className="font-bold text-4xl lg:text-4xl xl:text-5xl 2xl:text-7xl pt-10">
             {
               i18n.language !== "vi-VN" ? (
                 <div>
@@ -73,16 +72,19 @@ export default function Index() {
               <div className="flex-1">
                 <div className="w-full h-full flex items-end">
                   <div className="relative z-10">
-                    <div className={"absolute top-[110px] sm:top-[120px] md:top-[130px] lg:top-[105px] left-5 2xl:left-6 z-20 animate-hide-and-up-2 text-[12px] sm:text-[14px] lg:text-[17px] " + (i18n.language === "vi-VN" ? "lg:left-5 lg:text-[13px] xl:text-[14px] 2xl:text-[16px] 2xl:top-32 xl:top-28 xl:left-6" : "lg:left-4 lg:text-[15px] xl:text-[16px] 2xl:text-[19px] 2xl:top-36 xl:top-28 xl:left-5")}>
-                      <p className="font-medium "dangerouslySetInnerHTML={{__html: t('hi')}} />
-                      <input ref={inputEl} value={name} onChange={(e) => setName(e.target.value)} className="focus:placeholder-opacity-40 bg-transparent text-bvsPeach font-medium sm:w-[100px] lg:w-[120px] focus:outline-none placeholder-[#FF3750]" placeholder="Your Name" type="text"/>
+                    <div className={"absolute top-[110px] sm:top-[120px] md:top-[130px] left-5 2xl:left-6 z-20 animate-hide-and-up-2 text-[12px] sm:text-[14px] lg:text-[15px] " + (i18n.language === "vi-VN" ? " lg:top-[90px] lg:left-4 lg:text-[12px] xl:text-[13px] 2xl:text-[16px] 2xl:top-32 xl:top-[98px] xl:left-5" : " lg:top-[90px] lg:left-5 lg:text-[14px] xl:text-[14px] 2xl:text-[19px] 2xl:top-32 xl:top-[98px] xl:left-5 2xl:left-7")}>
+                      <p className="font-medium"dangerouslySetInnerHTML={{__html: t('hi')}}/>
+                      <input ref={inputEl} value={name} onChange={(e) => setName(e.target.value)}
+                        className={"focus:placeholder-opacity-40 bg-transparent text-bvsPeach font-medium focus:outline-none placeholder-[#FF3750] " + (i18n.language === "vi-VN" ? "sm:w-[100px] lg:w-[100px] 2xl:w-[126px]": "sm:w-[100px] lg:w-[80px] xl:w-[100px] 2xl:w-[120px]")} placeholder={i18n.language === 'vi-VN' ? 'Tên bạn' : 'Your Name'}
+                         type="text"/>
+                      <p className="font-medium">{t('amHappie')}</p>
                     </div>
                     <div className={"absolute font-semibold animate-hide-and-up-3 w-[310px] "
-                      + (i18n.language === "vi-VN" ? " -right-16 top-3 md:-right-6 lg:-right-16 lg:top-3 xl:-right-10 xl:top-2 2xl:right-0 2xl:top-3 z-20 text-[20px] xl:text-[22px] 2xl:text-[27px]": " -right-16 top-3 md:-right-6 lg:-right-12 lg:top-4 xl:-right-9 xl:top-6 2xl:right-0 2xl:top-5 z-20 text-[22px] xl:text-[25px] 2xl:text-[28px]" )
+                      + (i18n.language === "vi-VN" ? " -right-16 top-3 md:-right-6 lg:-right-20 lg:top-3 xl:-right-20 xl:top-2 2xl:right-0 2xl:top-3 z-20 text-[19px] xl:text-[21px] 2xl:text-[27px]": " -right-16 top-3 md:-right-6 lg:-right-20 lg:top-4 xl:-right-16 xl:top-2 2xl:right-0 2xl:top-5 z-20 text-[22px] xl:text-[28px] 2xl:text-[32px]" )
                     }>
                       <p dangerouslySetInnerHTML={{__html: t('weAre')}} />
                     </div>
-                    <div className="w-[600px] xl:w-[650px] 2xl:w-[766px]">
+                    <div className="w-[550px] xl:w-[600px] 2xl:w-[766px]">
                       <Image alt="title mascot" src={titleMascot}/>
                     </div>
                   </div>

@@ -27,7 +27,7 @@ export default function Connect() {
                     <div className="w-full mx-auto  text-center">
                         <p className="font-semibold text-[24px] mx-auto w-[740px] text-bvsNavy pt-5">{t('helpTitle')}</p>
                         </div>
-                        <div className="flex justify-around mt-20 w-[900px] mx-auto space-x-12">
+                        <div className="flex justify-around mt-10 2xl:mt-20 w-[900px] mx-auto space-x-12">
                             <div className="flex flex-col items-center max-w-[204px]">
                                 <div className="hover:scale-110 w-[151px] relative">
                                     <div className="w-full h-full">
@@ -51,33 +51,32 @@ export default function Connect() {
                                 <p className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">{t('headOfHouse')}</p>
                             </div>
                             <div className="flex flex-col items-center max-w-[204px]">
-                                <div className="hover:scale-105 w-[151px] relative overflow-hidden">
+                                <div className="hover:scale-110 w-[151px] relative overflow-hidden">
                                     <div className="w-full h-full">
-                                        <Image alt="frame image" src={porTraitFrame}/>
+                                        <Image alt="Mr.Luke Curran image" src={mrLukeCurranImage}/>
                                     </div>
-                                    <div className="absolute z-10 top-[7px] right-[19px]">
+                                    {/* <div className="absolute z-10 top-[7px] right-[19px]">
                                         <Image alt="Mr Luke Curran" src={mrLukeCurranImage}/>
-                                    </div>
+                                    </div> */}
                                 </div>
-                                <span className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">{t('mrLukeCurran')}
-                                </span>
+                                <span className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center" dangerouslySetInnerHTML={{__html: t('mrLukeCurran')}} />
                                 <span className="font-semibold text-sm text-bvsDrakTeal text-center">Luke.Curran@bvisivietnam.com 
                                 </span>
                             </div>
                             <div className="flex flex-col items-center max-w-[204px]">
                                 <div className="hover:scale-110 w-[151px] relative">
                                     <div className="w-full h-full">
-                                        <Image alt="frame image" src={porTraitFrame}/>
+                                        <Image alt="frame image" src={mailBoxImage}/>
                                     </div>
-                                    <div className="absolute z-10 top-[58px] right-[27px]">
+                                    {/* <div className="absolute z-10 top-[58px] right-[27px]">
                                         <Image alt="Mr Luke Curran" src={mailBoxImage}/>
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <p className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center">{t('worryBox')}</p>
                                 <p className="font-semibold text-sm text-bvsDrakTeal text-center">Theworrybox@bvisivietnam.com​</p>
                             </div>
                         </div>
-                        <p className="font-semibold text-[36px] text-center text-bvsPeach mt-[60px]">{`${name}, ${t('toHelp').toLocaleUpperCase()}`}</p>
+                        <p className="font-semibold text-[36px] text-center text-bvsPeach mt-[30px] 2xl:mt-[40px]">{`${name}, ${t('toHelp').toLocaleUpperCase()}`}</p>
                     </div>
                    </div>
             </div>

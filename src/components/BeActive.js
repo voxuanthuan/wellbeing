@@ -34,11 +34,13 @@ export default function BeActive() {
             <div className="h-full w-full flex justify-center">
                 <div>
                     <div className="h-heightBody w-full flex items-center">
-                    <div className="w-1/6 h-full flex items-center justify-end">
+                    <div className="lg:w-[15%] w-1/6 h-full flex items-center justify-end">
                             <div>
                                 <div className="lg:h-[420px] xl:h-[500px] flex flex-col justify-around">
                                     <div className="2xl:h-[80px] flex justify-start min-w-[105px]">
-                                        <Image alt="connect icon" src={beActiveIcon}/>
+                                        <div className="w-[64px] 2xl:w-auto">
+                                            <Image alt="connect icon" src={beActiveIcon}/>
+                                        </div>
                                     </div>
                                     <div>
                                         <div className="h-[265px] w-[2px] flex flex-col">
@@ -55,46 +57,46 @@ export default function BeActive() {
                                 </div>
                             </div>
                         </div>
-                        <div className="h-full w-3/6 max-w-[828px] flex flex-col justify-center">
-                            <h1 className="font-semibold text-2xl xl:text-3xl 2xl:text-4xl mt-20" dangerouslySetInnerHTML={{__html: t('beactiveDetail')}}></h1>
-                            <div className="mt-10 xl:mt-20">
+                        <div className="h-full lg:w-[55%] xl:w-3/6 max-w-[828px] flex flex-col justify-center">
+                            <h1 className="font-semibold text-2xl xl:text-3xl 2xl:text-4xl mt-10 2xl:mt-20" dangerouslySetInnerHTML={{__html: t('beactiveDetail')}}></h1>
+                            <div className="mt-10 2xl:mt-20">
                                 <h3 className="font-medium text-[18px] mb-5 xl:mb-10">{t('whynot')}</h3>
                                 <div className="flex text-sm font-normal text-black text-opacity-70">
                                     <ul className="ml-5">
                                         <li>
                                             <div className="mb-4 flex items-center">
                                                 <Image alt="dancing icon" src={dacingIcon}/>
-                                                <span className="ml-6">{t('beActive.danceWithSong')}</span>
+                                                <span className="ml-6 lg:max-w-[190px] xl:max-w-[210px]">{t('beActive.danceWithSong')}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="mb-4 flex items-center">
                                                 <Image alt="dog icon" src={dogIcon}/>
-                                                <span className="ml-6">{t('beActive.walk')}</span>
+                                                <span className="ml-6 lg:max-w-[190px] xl:max-w-[210px]">{t('beActive.walk')}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="mb-4 flex items-center">
                                                 <Image alt="hula loop icon" src={hulaHoopIcon}/>
-                                                <span className="ml-6">{t('beActive.hulaHoop')}</span>
+                                                <span className="ml-6 lg:max-w-[190px] xl:max-w-[210px]">{t('beActive.hulaHoop')}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="mb-4 flex items-center">
                                                 <Image alt="team icon" src={teamIcon}/>
-                                                <span className="ml-6">{t('beActive.sportTeams')}</span>
+                                                <span className="ml-6 lg:max-w-[190px] xl:max-w-[210px]">{t('beActive.sportTeams')}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="mb-4 flex items-center">
                                                 <Image alt="playground icon" src={playGroundIcon}/>
-                                                <span className="ml-6">{t('beActive.playGames')}</span>
+                                                <span className="ml-6 lg:max-w-[190px] xl:max-w-[210px]">{t('beActive.playGames')}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="mb-4 flex items-center">
                                                 <Image alt="bicycle icon" src={bicycleIcon}/>
-                                                <span className="ml-6">{t('beActive.walkOrCycle')}</span>
+                                                <span className="ml-6 lg:max-w-[190px] xl:max-w-[210px]">{t('beActive.walkOrCycle')}</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -102,30 +104,30 @@ export default function BeActive() {
                                         <li>
                                             <div className="mb-4 flex items-center">
                                                 <Image alt="garden icon" src={gardenIcon}/>
-                                                <span className="ml-6">{t('beActive.garden')}</span>
+                                                <span className="ml-6 lg:max-w-[190px] xl:max-w-[210px]">{t('beActive.garden')}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="mb-4 flex items-center">
                                                 <Image  alt="run icon" src={runIcon}/>
-                                                <span className="ml-6">{t('beActive.raceWithFriends')}</span>
+                                                <span className="ml-6 lg:max-w-[190px] xl:max-w-[210px]">{t('beActive.raceWithFriends')}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="mb-4 flex items-center">
                                                 <Image alt="sport icon" src={sportIcon}/>
-                                                <span className="ml-6">{t('beActive.makeUp')}</span>
+                                                <span className="ml-6 lg:max-w-[190px] xl:max-w-[210px]">{t('beActive.makeUp')}</span>
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div className="w-2/6 h-full flex flex-col justify-center">
-                            <div className="mt-20">
+                        <div className="lg:w-[30%] xl:w-2/6 h-full flex flex-col justify-center">
+                            <div className="mt-0 2xl:mt-20">
                                 <Image alt="music image" src={musicImage}/>
                             </div>
-                            <div className="w-[400px] xl:w-[500px] 2xl:w-[600px] relative mt-[118px] right-20 xl:mt-20 xl:right-32">
+                            <div className="w-[350px] xl:w-[450px] 2xl:w-[600px] relative mt-[110px] top-10 xl:top-0 right-20 xl:right-10 xl:mt-20 2xl:right-32">
                                 <Image alt="beactive image" src={beActiveImage}/>
                             </div>
                         </div>
