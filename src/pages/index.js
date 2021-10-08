@@ -21,7 +21,7 @@ export default function Index() {
     if (inputEl.current.value === undefined || inputEl.current.value.trim() === "") {
       return inputEl.current.focus();
     }
-    router.push('/action-plan')
+    router.push('/intro')
   }
   return (
     <div className="bg-[#B4EBF5] relative">
@@ -30,7 +30,7 @@ export default function Index() {
         <title>BVIS WELLBEING</title>
       </Head>
       <div className="w-full h-heightBody">
-        <div className="pl-16 xl:pl-48 h-full flex flex-col justify-around">
+        <div className="pl-0 lg:pl-16 xl:pl-48 h-full flex flex-col justify-around">
           <div className="font-bold text-4xl lg:text-4xl xl:text-5xl 2xl:text-7xl pt-10">
             {
               i18n.language !== "vi-VN" ? (
@@ -79,12 +79,12 @@ export default function Index() {
                          type="text"/>
                       <p className="font-medium">{t('amHappie')}</p>
                     </div>
-                    <div className={"absolute font-semibold animate-hide-and-up-3 w-[310px] "
+                    <div className={"absolute font-semibold animate-hide-and-up-3 w-auto lg:w-[310px] "
                       + (i18n.language === "vi-VN" ? " -right-16 top-3 md:-right-6 lg:-right-20 lg:top-3 xl:-right-20 xl:top-2 2xl:right-0 2xl:top-3 z-20 text-[19px] xl:text-[21px] 2xl:text-[27px]": " -right-16 top-3 md:-right-6 lg:-right-20 lg:top-4 xl:-right-16 xl:top-2 2xl:right-0 2xl:top-5 z-20 text-[22px] xl:text-[28px] 2xl:text-[32px]" )
                     }>
                       <p dangerouslySetInnerHTML={{__html: t('weAre')}} />
                     </div>
-                    <div className="w-[550px] xl:w-[600px] 2xl:w-[766px]">
+                    <div className="w-[330px] lg:w-[550px] xl:w-[600px] 2xl:w-[766px]">
                       <Image alt="title mascot" src={titleMascot}/>
                     </div>
                   </div>
