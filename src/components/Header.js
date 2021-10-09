@@ -5,13 +5,13 @@ import Link from 'next/link'
 
 export default function Header() {
     return (
-        <div className="h-16 flex items-end pl-16 bg-transparent">
+        <div className="h-16 flex items-end pl-0 md:pl-16 bg-transparent">
             <Link href="/" passHref>
                 <div>
-                    <div className="hidden md:block w-[428px] hover:cursor-pointer">
+                    <div className="hidden md:block w-auto md:w-[428px] hover:cursor-pointer">
                         <Image src={logo} alt="BVS Logo" />
                     </div>
-                    <div className="block md:hidden w-[428px] hover:cursor-pointer">
+                    <div className="block md:hidden w-auto md:w-[428px] hover:cursor-pointer">
                         <Image src={logoIcon} alt="BVS Logo" />
                     </div>
                 </div>
