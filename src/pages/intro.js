@@ -50,7 +50,7 @@ export default function Intro() {
                             <div className="h-full lg:flex items-center justify-center">
                                 <ul>
                                     <li className="animate-left-to-right-0">
-                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[25px] flex justify-center mb-[30px] xl:mb-[25px]"}>
+                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[25px] flex justify-center mb-[50px] md:mb-[30px] xl:mb-[25px]"}>
                                             <div className="w-[46px] h-[46px] sm:w-[64px] md:h-[64px] xl:w-[75px] xl:h-[75px]"><Image alt="connect icon" src={connectIcon} /></div>
                                             <div className="max-h-[78px] max-w-[80%] md:max-w-[450px] xl:max-w-[350px] 2xl:max-w-[360px] text-sm justify-around">
                                                 <h1 className={"text-xl xl:text-2xl font-semibold text-bvsOrange"} >{t('connect')}</h1>
@@ -59,7 +59,7 @@ export default function Intro() {
                                         </div>
                                     </li>
                                     <li className="animate-left-to-right-1">
-                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[25px] flex justify-center mb-[30px] xl:mb-[25px]"}>
+                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[25px] flex justify-center mb-[50px] md:mb-[30px] xl:mb-[25px]"}>
                                             <div className="w-[46px] h-[46px] sm:w-[64px] md:h-[64px] xl:w-[75px] xl:h-[75px]"><Image alt="beactive icon" src={beActiveIcon} /></div>
                                             <div className="max-h-[78px] max-w-[80%] md:max-w-[450px] xl:max-w-[350px] 2xl:max-w-[360px] text-sm justify-around">
                                                 <h1 className={"text-xl xl:text-2xl font-semibold text-bvsTeal"} >{t('be-active')}</h1>
@@ -68,7 +68,7 @@ export default function Intro() {
                                         </div>
                                     </li>
                                     <li className="animate-left-to-right-2">
-                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[25px] flex justify-center mb-[30px] xl:mb-[25px]"}>
+                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[25px] flex justify-center mb-[50px] md:mb-[30px] xl:mb-[25px]"}>
                                             <div className="w-[46px] h-[46px] sm:w-[64px] md:h-[64px] xl:w-[75px] xl:h-[75px]"><Image alt="keep-learning icon" src={keepLearningIcon} /></div>
                                             <div className="max-h-[78px] max-w-[80%] md:max-w-[450px] xl:max-w-[350px] 2xl:max-w-[360px] text-sm justify-around">
                                                 <h1 className={"text-xl xl:text-2xl font-semibold text-bvsBrightYellow"} >{t('keep-learning')}</h1>
@@ -77,7 +77,7 @@ export default function Intro() {
                                         </div>
                                     </li>
                                     <li className="animate-left-to-right-3">
-                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[25px] flex justify-center mb-[30px] xl:mb-[25px]"}>
+                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[25px] flex justify-center mb-[50px] md:mb-[30px] xl:mb-[25px]"}>
                                             <div className="w-[46px] h-[46px] sm:w-[64px] md:h-[64px] xl:w-[75px] xl:h-[75px]"><Image alt="give icon" src={giveIcon} /></div>
                                             <div className="max-h-[78px] max-w-[80%] md:max-w-[450px] xl:max-w-[350px] 2xl:max-w-[360px] text-sm justify-around">
                                                 <h1 className={"text-xl xl:text-2xl font-semibold text-bvsPeach"} >{t('give')}</h1>
@@ -86,7 +86,7 @@ export default function Intro() {
                                         </div>
                                     </li>
                                     <li className="animate-left-to-right-4">
-                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[25px] flex justify-center mb-[30px] xl:mb-[25px]"}>
+                                        <div className={"w-full h-[78px] space-x-2 xl:space-x-[25px] flex justify-center mb-[50px] md:mb-[30px] xl:mb-[25px]"}>
                                             <div className="w-[46px] h-[46px] sm:w-[64px] md:h-[64px] xl:w-[75px] xl:h-[75px]"><Image alt="take-notice icon" src={takeNoticeIcon} /></div>
                                             <div className="max-h-[78px] max-w-[80%] md:max-w-[450px] xl:max-w-[350px] 2xl:max-w-[360px] text-sm justify-around">
                                                 <h1 className={"text-xl xl:text-2xl font-semibold text-bvsDrakTeal"} >{t('take-notice')}</h1>
