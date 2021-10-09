@@ -24,12 +24,12 @@ export default function Index() {
     router.push('/intro')
   }
   return (
-    <div className="bg-[#B4EBF5] relative">
+    <div className="bg-[#B4EBF5] relative h-screen">
       <Header/>
       <Head>
         <title>BVIS WELLBEING</title>
       </Head>
-      <div className="w-full h-full md:h-heightBody">
+      <div className="w-full h-heightBody">
         <div className="pl-0 md:pl-6 lg:pl-16 xl:pl-48 h-full flex flex-col justify-around">
           <div className="font-bold text-2xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-7xl pt-0 md:pt-10">
             {
