@@ -30,7 +30,7 @@ export default function Index() {
         <title>BVIS WELLBEING</title>
       </Head>
       <div className="w-full h-heightBody">
-        <div className="pl-0 md:pl-6 lg:pl-16 xl:pl-48 h-full flex flex-col justify-around">
+        <div className="pl-3 md:pl-6 lg:pl-16 xl:pl-48 h-full flex flex-col justify-around">
           <div className="font-bold text-2xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-7xl pt-0 md:pt-10">
             {
               i18n.language !== "vi-VN" ? (
@@ -73,7 +73,7 @@ export default function Index() {
                 <div className="w-full h-full flex items-end md:justify-center justify-start">
                   <div className="relative z-10">
                     <div className={"absolute top-[110px] sm:top-[120px] md:left-7 lg:left-5 2xl:left-6 z-20 animate-hide-and-up-2 text-[12px] sm:text-[14px] md:text-base lg:text-[15px] " 
-                    + (i18n.language === "vi-VN" ? "md:top-[108px]  lg:top-[90px] md:left-[21px] lg:left-4 text-[10px] md:text-[14px] lg:text-[12px] xl:text-[13px] 2xl:text-[16px] 2xl:top-32 xl:top-[98px] xl:left-5" 
+                    + (i18n.language === "vi-VN" ? "top-[50px] left-2 md:top-[108px]  lg:top-[90px] md:left-[21px] lg:left-4 text-[7px] md:text-[14px] lg:text-[12px] xl:text-[13px] 2xl:text-[16px] 2xl:top-32 xl:top-[98px] xl:left-5" 
                     : " top-[50px] md:top-[110px]  lg:top-[90px] left-3 md:left-5 text-[7px] lg:text-[14px] xl:text-[14px] 2xl:text-[19px] 2xl:top-32 xl:top-[98px] xl:left-5 2xl:left-7")}>
                       <p className="font-medium"dangerouslySetInnerHTML={{__html: t('hi')}}/>
                       <input ref={inputEl} value={name} onChange={(e) => setName(e.target.value)}
@@ -83,7 +83,7 @@ export default function Index() {
                     </div>
                     <div className={"absolute font-semibold animate-hide-and-up-3 w-auto lg:w-[310px] "
                       + (i18n.language === "vi-VN" ?
-                       " -right-16 top-3 md:right-12 lg:-right-20 lg:top-3 xl:-right-20 xl:top-2 2xl:right-0 2xl:top-3 z-20 text-[23px] lg:text-[19px] xl:text-[21px] 2xl:text-[27px]":
+                       " top-1 md:top-3 right-5 md:right-12 lg:-right-20 lg:top-3 xl:-right-20 xl:top-2 2xl:right-0 2xl:top-3 z-20 text-[11px] md:text-[23px] lg:text-[19px] xl:text-[21px] 2xl:text-[27px]":
                        " right-7 top-1 md:right-16 lg:-right-20 lg:top-4 xl:-right-16 xl:top-2 2xl:right-0 2xl:top-5 z-20 text-[14px] md:text-[30px] lg:text-[22px] xl:text-[28px] 2xl:text-[32px]" )
                     }>
                       <p dangerouslySetInnerHTML={{__html: t('weAre')}} />

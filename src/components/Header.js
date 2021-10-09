@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Header() {
     return (
-        <div className="h-16 flex items-end pl-0 md:pl-16 bg-transparent">
+        <div className="h-16 flex items-end pl-4 md:pl-16 bg-transparent">
             <Link href="/" passHref>
                 <div>
                     <div className="hidden md:block w-auto md:w-[428px] hover:cursor-pointer">
