@@ -314,7 +314,7 @@ export default function Quizzes() {
                                 {
                                     currentQuestions.map((question) => {
                                         return (
-                                            <table className="table">
+                                            <table key={question.id} className="table">
                                                 <thead>
                                                     <tr className="w-full">
                                                         <th colSpan="5" className={"text-left " + classStr(question.id + 1)}>{t(`${question.content}`)}</th>
