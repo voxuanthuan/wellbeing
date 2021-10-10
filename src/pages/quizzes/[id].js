@@ -188,7 +188,7 @@ export default function Quizzes() {
                             <div className="h-full w-full">
                                 <p className="ml-3 text-base font-medium text-black opacity-60 pt-8">{pagesNumber} / 15</p>
                                 <p className="p-3 text-left font-semibold text-[30px] lg:text-[18px] xl:text-[30px] 2xl:text-[36px] text-bvsPeach underline">{t('question')}</p>
-                                <div>
+                                <div className="flex flex-col">
                                     {
                                         currentQuestions.map((question) => {
                                             return (
