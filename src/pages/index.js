@@ -21,7 +21,7 @@ export default function Index() {
     if (inputEl.current.value === undefined || inputEl.current.value.trim() === "") {
       return inputEl.current.focus();
     }
-    router.push('/intro')
+    router.push('/result')
   }
   return (
     <div className="bg-[#B4EBF5] relative h-screen">

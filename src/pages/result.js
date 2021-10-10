@@ -163,12 +163,12 @@ export default function Result() {
 
     function renderOnMobile() {
         return (
-            <div className="lg:hidden flex justify-around text-bvsDrakTeal space-x-3 md:space-x-10 mt-10">
+            <div className="lg:hidden flex flex-col items-center sm:items-start sm:flex-row sm:justify-around text-bvsDrakTeal space-x-3 md:space-x-10 mt-10">
                 <div className="flex-1">
-                    <div className="flex justify-end">
+                    <div className="flex justify-center sm:justify-end">
                         <p className="max-w-[200px] text-[24px] font-semibold text-bvsNavy leading-[27px] mb-8 text-right">{t('wellbeingTracker')}</p>
                     </div>
-                    <div className="flex justify-end mb-3 md:mb-6">
+                    <div className="flex justify-center sm:justify-end mb-3 md:mb-6">
                         <div className="flex flex-col justify-center rounded-[20px] h-[250px] lg:h-auto lg:rounded-none w-[177px] bg-white bg-opacity-40 relative right-0">
                             <div>
                                 <div className="mb-[15px] w-full lg:max-w-180px">
@@ -185,7 +185,7 @@ export default function Result() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-end mb-3 md:mb-6">
+                    <div className="flex justify-center sm:justify-end mb-3 md:mb-6">
                         <div className="flex flex-col justify-center rounded-[20px] h-[250px] lg:h-auto lg:rounded-none  w-[177px] bg-white bg-opacity-40 relative right-0">
                             <div className="w-full">
                                 <div className="mb-[15px] w-full lg:max-w-180px">
@@ -202,7 +202,7 @@ export default function Result() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-end">
+                    <div className="hidden sm:flex justify-center sm:justify-end">
                         <div className="flex flex-col items-center mt-12 mr-4">
                             <Link href="/action-plan" passHref>
                                 <button className={"bg-bvsPeach rounded-[15px] text-base font-medium text-white mb-2 " + (isVietNamese() ? "w-[200px] h-[40px]" : "w-[144px] h-[35px]")}>
@@ -214,7 +214,7 @@ export default function Result() {
                         </div>
                     </div>
                 </div>
-                <div className="flex-1" >
+                <div className="flex-1 flex flex-col items-center" >
                     <div className="flex flex-col justify-center rounded-[20px] h-[250px] lg:h-auto lg:rounded-none  w-[177px] bg-white bg-opacity-40 mb-3 md:mb-6">
                         <div className="w-full">
                             <div className="mb-[15px] w-full lg:max-w-180px">
@@ -262,6 +262,18 @@ export default function Result() {
                             </div>
                         </div>
                     </div>
+
+                    <div className="flex sm:hidden justify-center sm:justify-end">
+                        <div className="flex flex-col items-center mt-12 mr-4">
+                            <Link href="/action-plan" passHref>
+                                <button className={"bg-bvsPeach rounded-[15px] text-base font-medium text-white mb-2 " + (isVietNamese() ? "w-[220px] h-[40px]" : "w-[144px] h-[35px]")}>
+                                    <a>{t('actionPlanButotn').toLocaleUpperCase()}</a>
+                                </button>
+                            </Link>
+                            <p className={"text-base text-black text-opacity-60 text-center "  + (isVietNamese() ? "max-w-[260px]" : "max-w-[200px]")}>{t('clickToActionPlan')}</p>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         )
@@ -270,9 +282,9 @@ export default function Result() {
         <div className="bg-bvsTealLight lg:bg-[#FAF5ED] bg-no-repeat bg-cover">
             <Header/>
             <div className="h-full 2xl:h-heightBody">
-                <div className="flex flex-col h-32 pt-4 2xl:pt-[10px] items-center">
+                <div className="flex flex-col h-44 sm:h-32 pt-4 2xl:pt-[10px] items-center">
                     <p className="font-medium text-[20px]">{`${name}${t('suffix')}`}</p>
-                    <h1 className="font-semibold text-[36px] text-bvsPeach inline-block">{t('wellbeingReport').toLocaleUpperCase()}</h1>
+                    <h1 className="font-semibold text-[32px] sm:text-[36px] text-bvsPeach inline-block text-center">{t('wellbeingReport').toLocaleUpperCase()}</h1>
                 </div>
                 <div className="w-full flex flex-col 2xl:flex-row">
                      <p className="lg:hidden text-[24px] font-semibold text-bvsNavy leading-[27px] mb-5 text-center">{t('overallWellbeing')}</p>
@@ -280,26 +292,26 @@ export default function Result() {
                         <p className="hidden lg:block text-[24px] font-semibold text-bvsNavy leading-[27px] mb-10 2xl:mb-20 text-center">{t('overallWellbeing')}</p>
                        <div className="flex flex-col items-center">
                            <div className="flex">
-                               <div className="text-base font-normal text-bvsDrakTeal leading-[16px] relative -left-10 top-[50px] lg:-left-3 lg:top-[44px] xl:-left-10">
+                               <div className="text-base font-normal text-bvsDrakTeal leading-[16px] relative -left-4 top-[40px] md:-left-10 md:top-[50px] lg:-left-3 lg:top-[44px] xl:-left-10">
                                     <p
                                         className={"mb-[14px] xl:mb-[29px] flex justify-end text-right "
-                                        + (i18n.language === 'vi-VN' ? "max-w-[180px] " : "max-w-[130px] ") + (totalScore <= 60 && totalScore > 45 ? "text-bvsPeach font-semibold" : "")}
+                                        + (i18n.language === 'vi-VN' ? "max-w-[150px] sm:max-w-[180px] " : "max-w-[130px] ") + (totalScore <= 60 && totalScore > 45 ? "text-bvsPeach font-semibold" : "")}
                                     >{t('wellbeingChampion')}</p>
                                     <p className={"mb-[29px] text-right " 
-                                        + (i18n.language === 'vi-VN' ? "max-w-[180px] " : "max-w-[130px] ")
+                                        + (i18n.language === 'vi-VN' ? "max-w-[150px] sm:max-w-[180px] " : "max-w-[130px] ")
                                         + (totalScore <= 45 && totalScore > 30 ? "text-bvsPeach font-semibold" : "")
                                         }>{t('doingWell')}</p>
                                     <p className={"mb-[29px] text-right "
-                                         + (i18n.language === 'vi-VN' ? "max-w-[180px] " : "max-w-[130px] ")
+                                         + (i18n.language === 'vi-VN' ? "max-w-[150px] sm:max-w-[180px] " : "max-w-[130px] ")
                                          + (totalScore <= 30 && totalScore > 15 ? "text-bvsPeach font-semibold" : "")
                                         }>{t('makingProcess')}</p>
                                     <p className={"mb-[29px] text-right " 
-                                         + (i18n.language === 'vi-VN' ? "max-w-[180px] " : "max-w-[130px] ")
+                                         + (i18n.language === 'vi-VN' ? "max-w-[150px] sm:max-w-[180px] " : "max-w-[130px] ")
                                          + (totalScore <= 15 ? "text-bvsPeach font-semibold" : "")
                                          }>{t('trySomethingNew')}</p>
                                </div>
                                <div>
-                                 <div className="w-[205px] lg:w-[180px] xl:w-[205px]">
+                                 <div className="w-[160px] sm:w-[205px] lg:w-[180px] xl:w-[205px]">
                                    <Image alt="image" src={renderThermometerMain()}/>
                                 </div>
                                </div>
