@@ -21,16 +21,17 @@ import keepLearningIcon from '../../public/keep-learning/keep-learning.svg';
 
 
 export default function KeepLearning() {
-    const {t} = useTranslation()
+    const {t, i18n} = useTranslation()
     return (
-        <div className="h-screen bg-keepLearning bg-no-repeat bg-cover">
-            <div className="flex justify-end pt-5 pr-8">
-                <div className="flex items-center">
-                    <p className="text-bvsBrightYellow font-medium">{t('keep-learning').toLocaleUpperCase()}</p>
-                    <div className="ml-3"><Image alt="beactive tag" src={keepLearningTag}/></div>
+        <div className={"h-full sm:min-h-0 md:h-screen bg-keepLearning bg-no-repeat bg-cover flex justify-center items-center md:block " + (i18n.language === 'vi-VN' ? " min-h-[1000px]" : " min-h-[900px]")}>
+            <div>
+                <div className="hidden sm:flex justify-end pt-5 pr-8">
+                    <div className="flex items-center">
+                        <p className="text-bvsBrightYellow font-medium">{t('keep-learning').toLocaleUpperCase()}</p>
+                        <div className="ml-3"><Image alt="beactive tag" src={keepLearningTag}/></div>
+                    </div>
                 </div>
-            </div>
-            <div className="h-full w-full flex justify-center">
+                <div className="h-full w-full flex justify-center">
                 <div>
                     <div className="h-heightBody w-full flex items-center">
                         <div className="lg:w-[15%] xl:w-1/6 h-full hidden lg:flex items-center justify-end">
@@ -59,65 +60,70 @@ export default function KeepLearning() {
                                 </div>
                             </div>
                         <div className="h-full w-full lg:w-[55%] xl:w-3/6 max-w-[828px] pl-3 lg:pl-0 flex flex-col justify-center">
-                            <h1 className="font-semibold text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl mt-10 2xl:mt-20" dangerouslySetInnerHTML={{__html: t('keepLeaningDetail')}}></h1>
+                            <div>
+                                <div className="w-[48px] sm:w-[52px] lg:hidden ml-3">
+                                    <Image alt="connect icon" src={keepLearningIcon}/>
+                                </div>
+                                <h1 className="font-semibold text-2xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl mt-0 lg:mt-10 2xl:mt-20" dangerouslySetInnerHTML={{__html: t('keepLeaningDetail')}}></h1>
+                            </div>
                             <div className="mt-10 2xl:mt-20">
                                 <h3 className="font-medium text-[20px] lg:text-[18px] mb-5 2xl:mb-10">{t('whynot')}</h3>
-                                <div className="flex text-base lg:text-sm font-normal text-black text-opacity-70">
+                                <div className="flex flex-col md:flex-row text-base lg:text-sm font-normal text-black text-opacity-70">
                                 <ul className="ml-3">
                                         <li>
                                             <div className="mb-5 lg:mb-4 flex items-center">
                                                 <Image alt="word icon" src={wordIcon}/>
-                                                <span className="ml-6 max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.newWord')}</span>
+                                                <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.newWord')}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="mb-5 lg:mb-4 flex items-center">
                                                 <Image alt="gallery" src={artGalleryIcon}/>
-                                                <span className="ml-6 max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.artGallery')}</span>
+                                                <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.artGallery')}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="mb-5 lg:mb-4 flex items-center">
                                                 <Image alt="guitar" src={bassGuiterIcon}/>
-                                                <span className="ml-6 max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.musicalInstrument')}</span>
+                                                <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.musicalInstrument')}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="mb-5 lg:mb-4 flex items-center">
                                                 <Image alt="search" src={searchIcon}/>
-                                                <span className="ml-6 max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.wordSearch')}</span>
+                                                <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.wordSearch')}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="mb-5 lg:mb-4 flex items-center">
                                                 <Image alt="meal" src={mealIcon}/>
-                                                <span className="ml-6 max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.newFood')}</span>
+                                                <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.newFood')}</span>
                                             </div>
                                         </li>
                                     </ul>
-                                    <ul className="ml-10">
+                                    <ul className="ml-3 md:ml-10">
                                         <li>
                                             <div className="mb-5 lg:mb-4 flex items-center">
                                                 <Image alt="cook" src={cookIcon}/>
-                                                <span className="ml-6 max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.cookRecipe')}</span>
+                                                <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.cookRecipe')}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="mb-5 lg:mb-4 flex items-center">
                                                 <Image alt="bee" src={beeIcon}/>
-                                                <span className="ml-6 max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.animalOrBug')}</span>
+                                                <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.animalOrBug')}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="mb-5 lg:mb-4 flex items-center">
                                                 <Image alt="map icon" src={mapIcon}/>
-                                                <span className="ml-6 max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.newPlace')}</span>
+                                                <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.newPlace')}</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="mb-5 lg:mb-4 flex items-center">
                                                 <Image alt="note icon" src={noteIcon}/>
-                                                <span className="ml-6 max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.storyOrSong')}</span>
+                                                <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[190px] xl:max-w-[210px]">{t('keepLearning.storyOrSong')}</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -134,6 +140,7 @@ export default function KeepLearning() {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     )

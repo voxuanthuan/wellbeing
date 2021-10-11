@@ -138,6 +138,7 @@ module.exports = {
     maxWidth: {
       '35': '35px'
     },
+
     extend: {
       spacing: {
         'heightBody': 'calc(100vh - 64px)',

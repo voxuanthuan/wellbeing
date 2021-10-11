@@ -163,6 +163,6 @@
     "bvis": "BVIS",
     "wellbeing": "WELLBEING",
     "campagin": "CAMPAIGN",
-    "tips": "Here are some simple things to do everyday that can help you to feel happier and more positive...",
+    "tips": "Here are some simple things to do everyday that can help you to feel <span class='text-bvsPeach'>happier</span> and more <span class='text-bvsPeach'>positive...</span>",
     "scrollDown": "Scroll down for more"
 }

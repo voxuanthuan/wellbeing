@@ -19,16 +19,17 @@ import takeNoticeIcon from '../../public/take-notice/take-notice.svg';
 
 
 export default function TakeNotice() {
-    const {t} = useTranslation()
+    const {t, i18n} = useTranslation()
     return (
-        <div className="h-screen bg-takeNotice bg-no-repeat bg-cover">
-            <div className="flex justify-end pt-5 pr-8">
-                <div className="flex items-center">
-                    <p className="text-bvsDrakTeal font-medium">{t('take-notice').toLocaleUpperCase()}</p>
-                    <div className="ml-3"><Image alt="beactive tag" src={takeNoticeTag}/></div>
+        <div className={"h-full sm:min-h-0 md:h-screen bg-takeNotice bg-no-repeat bg-cover flex justify-center items-center md:block " + (i18n.language === 'vi-VN' ? "min-h-[1150px]" : "min-h-[1000px]")}>
+            <div>
+                <div className="hidden sm:flex justify-end pt-5 pr-8">
+                    <div className="flex items-center">
+                        <p className="text-bvsDrakTeal font-medium">{t('take-notice').toLocaleUpperCase()}</p>
+                        <div className="ml-3"><Image alt="beactive tag" src={takeNoticeTag}/></div>
+                    </div>
                 </div>
-            </div>
-            <div className="w-full flex justify-center">
+                <div className="w-full flex justify-center">
                 <div>
                     <div className="h-heightBody w-full flex items-center">
                     <div className="lg:w-[15%] xl:w-1/6 h-full hidden lg:flex items-center justify-end">
@@ -55,55 +56,60 @@ export default function TakeNotice() {
                             </div>
                         </div>
                         <div className="h-full w-full lg:w-[55%] xl:w-3/6 max-w-[828px] pl-3 lg:pl-0 flex flex-col justify-center">
-                            <h1 className="font-semibold text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl mt-10 2xl:mt-20" dangerouslySetInnerHTML={{__html: t('takeNoticeDetail')}}></h1>
+                            <div>
+                                <div className="w-[48px] sm:w-[52px] lg:hidden ml-3">
+                                    <Image alt="connect icon" src={takeNoticeIcon}/>
+                                </div>
+                                <h1 className="font-semibold text-2xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl mt-0 lg:mt-10 2xl:mt-20" dangerouslySetInnerHTML={{__html: t('takeNoticeDetail')}}></h1>
+                            </div>
                             <div className="mt-8 2xl:mt-20">
                                 <h3 className="font-medium text-base lg:text-[18px] mb-5 2xl:mb-10">{t('whynot')}</h3>
-                                <div className="flex text-base lg:text-sm font-normal text-black text-opacity-70">
+                                <div className="flex flex-col  md:flex-row text-base lg:text-sm font-normal text-black text-opacity-70">
                                 <ul className="flex-1 ml-3">
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <div className="w-[33px] h-[33px]">
                                                 <Image width="33px" height="33px" alt="word icon" src={windowIcon}/>
                                             </div>
-                                            <span className="pl-6 max-w-[280px] lg:max-w-[200px] xl:max-w-[250px]  2xl:max-w-[300px]">{t('takeNoticeInfo.look')}</span>
+                                            <span className="pl-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[200px] xl:max-w-[250px]  2xl:max-w-[300px]">{t('takeNoticeInfo.look')}</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <Image alt="gallery" src={paintIcon}/>
-                                            <span className="pl-6 max-w-[280px] lg:max-w-[200px] xl:max-w-[250px]  2xl:max-w-[300px]">{t('takeNoticeInfo.paint')}</span>
+                                            <span className="pl-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[200px] xl:max-w-[250px]  2xl:max-w-[300px]">{t('takeNoticeInfo.paint')}</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <Image alt="guitar" src={thinkingIcon}/>
-                                            <span className="pl-6 max-w-[280px] lg:max-w-[200px] xl:max-w-[250px]  2xl:max-w-[300px]">{t('takeNoticeInfo.think')}</span>
+                                            <span className="pl-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[200px] xl:max-w-[250px]  2xl:max-w-[300px]">{t('takeNoticeInfo.think')}</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <Image alt="search" src={rainIcon}/>
-                                            <span className="pl-6 max-w-[280px] lg:max-w-[200px] xl:max-w-[250px]  2xl:max-w-[300px]">{t('takeNoticeInfo.listen')}</span>
+                                            <span className="pl-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[200px] xl:max-w-[250px]  2xl:max-w-[300px]">{t('takeNoticeInfo.listen')}</span>
                                         </div>
                                     </li>
                                 </ul>
-                                <ul className="ml-10 flex-1">
+                                <ul className="ml-3 md:ml-10 flex-1">
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <Image alt="meal" src={searchIcon}/>
-                                            <span className="pl-6 max-w-[280px] lg:max-w-[200px] xl:max-w-[250px]  2xl:max-w-[300px]">{t('takeNoticeInfo.play')}</span>
+                                            <span className="pl-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[200px] xl:max-w-[250px]  2xl:max-w-[300px]">{t('takeNoticeInfo.play')}</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <Image alt="cook" src={familyIcon}/>
-                                            <span className="pl-6 max-w-[280px] lg:max-w-[200px] xl:max-w-[250px]  2xl:max-w-[300px]">{t('takeNoticeInfo.notice')}</span>
+                                            <span className="pl-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[200px] xl:max-w-[250px]  2xl:max-w-[300px]">{t('takeNoticeInfo.notice')}</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <Image alt="bee" src={moonIcon}/>
-                                            <span className="pl-6 max-w-[280px] lg:max-w-[200px] xl:max-w-[250px]  2xl:max-w-[300px]">{t('takeNoticeInfo.lookAt')}</span>
+                                            <span className="pl-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[200px] xl:max-w-[250px]  2xl:max-w-[300px]">{t('takeNoticeInfo.lookAt')}</span>
                                         </div>
                                     </li>
                                     <li>
@@ -131,6 +137,7 @@ export default function TakeNotice() {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     )

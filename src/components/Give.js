@@ -18,17 +18,18 @@ import smileIcon from '../../public/give/smile.svg';
 import washDishesIcon from '../../public/give/wash-dishes.svg';
 
 export default function Give() {
-    const {t} = useTranslation()
+    const {t, i18n} = useTranslation()
     return (
         <>
-        <div className="h-screen bg-give bg-no-repeat bg-cover">
-        <div className="flex justify-end pt-5 pr-8">
-            <div className="flex items-center">
-                <p className="text-bvsPeach font-medium">{t('give').toLocaleUpperCase()}</p>
-                <div className="ml-3"><Image alt="give tag" src={giveTag}/></div>
-            </div>
-        </div>
-        <div className="h-full w-full flex justify-center">
+        <div className={"h-full sm:min-h-0 md:h-screen bg-give bg-no-repeat bg-cover flex justify-center items-center md:block " + (i18n.language === 'vi-VN' ? "min-h-[1000px]" : "min-h-[900px]")}>
+            <div>
+                <div className="hidden sm:flex justify-end pt-5 pr-8">
+                    <div className="flex items-center">
+                        <p className="text-bvsPeach font-medium">{t('give').toLocaleUpperCase()}</p>
+                        <div className="ml-3"><Image alt="give tag" src={giveTag}/></div>
+                    </div>
+                </div>
+                <div className="h-full w-full flex justify-center">
             <div>
                 <div className="h-heightBody w-full flex items-center">
                     <div className="w-[15%] xl:w-1/6 h-full hidden lg:flex items-center justify-end">
@@ -57,59 +58,64 @@ export default function Give() {
                             </div>
                         </div>
                     <div className="h-full w-full lg:w-[55%] xl:w-3/6 max-w-[828px] pl-3 lg:pl-0 flex flex-col justify-center">
-                        <h1 className="font-semibold text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl mt-10 2xl:mt-20" dangerouslySetInnerHTML={{__html: t('giveDetail')}}></h1>
+                        <div>
+                            <div className="w-[48px] sm:w-[52px] lg:hidden ml-3">
+                                <Image alt="connect icon" src={giveIcon}/>
+                            </div>
+                            <h1 className="font-semibold text-2xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl mt-0 lg:mt-10 2xl:mt-20" dangerouslySetInnerHTML={{__html: t('giveDetail')}}></h1>
+                        </div>
                         <div className="mt-10 2xl:mt-20">
-                            <h3 className="font-medium text-[20px] lg:text-[18px] mb-5 2xl:mb-10">{t('whynot')}</h3>
-                            <div className="flex text-base lg:text-sm font-normal text-black text-opacity-70">
+                            <h3 className="font-medium text-[18px] sm:text-[20px] lg:text-[18px] mb-5 2xl:mb-10">{t('whynot')}</h3>
+                            <div className="flex flex-col md:flex-row text-base lg:text-sm font-normal text-black text-opacity-70">
                             <ul className="flex-1 ml-3">
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <Image alt="word icon" src={smileIcon}/>
-                                            <span className="ml-6 max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.smile')}</span>
+                                            <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.smile')}</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <Image alt="gallery" src={giftIcon}/>
-                                            <span className="ml-6 max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.make')}</span>
+                                            <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.make')}</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <Image alt="guitar" src={doorIcon}/>
-                                            <span className="ml-6 max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.hold')}</span>
+                                            <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.hold')}</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <Image alt="search" src={givingIcon}/>
-                                            <span className="ml-6 max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.give')}</span>
+                                            <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.give')}</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <Image alt="meal" src={presentIcon}/>
-                                            <span className="ml-6 max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.send')}</span>
+                                            <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.send')}</span>
                                         </div>
                                     </li>
                                 </ul>
-                                <ul className="pl-5 flex-1">
+                                <ul className="pl-3 md:pl-5 flex-1">
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <Image alt="cook" src={sharingIcon}/>
-                                            <span className="ml-6 max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.share')}</span>
+                                            <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.share')}</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <Image alt="bee" src={washDishesIcon}/>
-                                            <span className="ml-6 max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.help')}</span>
+                                            <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.help')}</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="mb-5 lg:mb-4 flex items-center">
                                             <Image alt="map icon" src={hugIcon}/>
-                                            <span className="ml-6 max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.listen')}</span>
+                                            <span className="ml-6 max-w-[220px] sm:max-w-[280px] lg:max-w-[180px] xl:max-w-[240px]">{t('giveInfo.listen')}</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -127,7 +133,8 @@ export default function Give() {
                 </div>
             </div>
         </div>
-    </div>
+            </div>
+        </div>
     </>
     )
 }
