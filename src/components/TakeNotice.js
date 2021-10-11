@@ -21,7 +21,7 @@ import takeNoticeIcon from '../../public/take-notice/take-notice.svg';
 export default function TakeNotice() {
     const {t, i18n} = useTranslation()
     return (
-        <div className={"h-full sm:min-h-0 md:h-screen bg-takeNotice bg-no-repeat bg-cover flex justify-center items-center md:block " + (i18n.language === 'vi-VN' ? "min-h-[1150px]" : "min-h-[1000px]")}>
+        <div className={"h-full sm:min-h-0 md:h-screen bg-bvsWarmWhite sm:bg-takeNotice bg-no-repeat bg-cover flex justify-center items-center md:block " + (i18n.language === 'vi-VN' ? "min-h-[1150px]" : "min-h-[1000px]")}>
             <div>
                 <div className="hidden sm:flex justify-end pt-5 pr-8">
                     <div className="flex items-center">

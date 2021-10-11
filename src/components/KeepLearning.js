@@ -23,7 +23,7 @@ import keepLearningIcon from '../../public/keep-learning/keep-learning.svg';
 export default function KeepLearning() {
     const {t, i18n} = useTranslation()
     return (
-        <div className={"h-full sm:min-h-0 md:h-screen bg-keepLearning bg-no-repeat bg-cover flex justify-center items-center md:block " + (i18n.language === 'vi-VN' ? " min-h-[1000px]" : " min-h-[900px]")}>
+        <div className={"h-full sm:min-h-0 md:h-screen bg-bvsWarmWhite sm:bg-keepLearning bg-no-repeat bg-cover flex justify-center items-center md:block " + (i18n.language === 'vi-VN' ? " min-h-[1000px]" : " min-h-[900px]")}>
             <div>
                 <div className="hidden sm:flex justify-end pt-5 pr-8">
                     <div className="flex items-center">
