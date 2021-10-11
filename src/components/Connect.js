@@ -27,7 +27,7 @@ export default function Connect() {
             <div className="flex justify-center w-full h-full">
                <div>
                     <div className="h-heightBody w-full flex items-center">
-                        <div className="lg:w-[15%] w-1/6 h-full flex items-center justify-end">
+                        <div className="hidden lg:flex lg:w-[15%] w-1/6 h-full items-center justify-end">
                             <div>
                                 <div className="lg:h-[480px] 2xl:h-[550px] flex flex-col justify-around items-start">
                                     <div className="flex justify-start">
@@ -52,53 +52,53 @@ export default function Connect() {
                                 </div>
                             </div>
                         </div>
-                        <div className="h-full lg:w-[55%] xl:w-3/6 max-w-[828px] flex flex-col justify-center">
+                        <div className="h-full w-full lg:w-[55%] xl:w-3/6 max-w-[828px] pl-3 lg:pl-0 flex flex-col justify-center">
                             <h1 className="font-semibold text-2xl xl:text-2xl 2xl:text-4xl mt-10 2xl:mt-20" dangerouslySetInnerHTML={{__html: t('connectDetail')}}/>
                             <div className="mt-10 2xl:mt-20">
-                                <h3 className="font-medium text-[18px] mb-10">{t('whynot')}</h3>
-                                <div className="ml-5 text-sm font-normal text-black text-opacity-70 leading-[17px]">
+                                <h3 className="font-medium text-[20px] lg:text-[18px] mb-10">{t('whynot')}</h3>
+                                <div className="ml-5 text-base lg:text-sm font-normal text-black text-opacity-70 leading-[17px]">
                                     <ul>
                                         <li>
-                                            <div className="mb-4 flex items-center">
+                                            <div className="mb-8 lg:mb-4 flex items-center">
                                                 <Image alt="family icon" src={familyImage}/>
-                                                <span className="ml-6 max-w-[250px] xl:max-w-[270px]">{t('connectInfo.talk')}</span>
+                                                <span className="ml-6 max-w-[300px] lg:max-w-[250px] xl:max-w-[270px]">{t('connectInfo.talk')}</span>
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="mb-4 flex items-center">
+                                            <div className="mb-8 lg:mb-4 flex items-center">
                                                 <Image alt="friend image" src={friendImage}/>
-                                                <span className="ml-6 max-w-[250px] xl:max-w-[270px]">{t('connectInfo.help')}</span>
+                                                <span className="ml-6 max-w-[300px] lg:max-w-[250px] xl:max-w-[270px]">{t('connectInfo.help')}</span>
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="mb-4 flex items-center">
+                                            <div className="mb-8 lg:mb-4 flex items-center">
                                                 <Image alt="meal image" src={mealImage}/>
-                                                <span className="ml-6 max-w-[250px] xl:max-w-[270px]">{t('connectInfo.eatMeal')}</span>
+                                                <span className="ml-6 max-w-[300px] lg:max-w-[250px] xl:max-w-[270px]">{t('connectInfo.eatMeal')}</span>
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="mb-4 flex items-center">
+                                            <div className="mb-8 lg:mb-4 flex items-center">
                                                 <Image alt="highfive" src={highFive}/>
-                                                <span className="ml-6 max-w-[250px] xl:max-w-[270px]">{t('connectInfo.makeFriend')}</span>
+                                                <span className="ml-6 max-w-[300px] lg:max-w-[250px] xl:max-w-[270px]">{t('connectInfo.makeFriend')}</span>
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="mb-4 flex items-center">
+                                            <div className="mb-8 lg:mb-4 flex items-center">
                                                 <Image alt="hi image" src={hiImage}/>
-                                                <span className="ml-6 max-w-[250px] xl:max-w-[270px]">{t('connectInfo.sayHello')}</span>
+                                                <span className="ml-6 max-w-[300px] lg:max-w-[250px] xl:max-w-[270px]">{t('connectInfo.sayHello')}</span>
                                             </div>
                                         </li>
                                         <li>
-                                            <div className="mb-4 flex items-center">
+                                            <div className="mb-8 lg:mb-4 flex items-center">
                                                 <Image alt="pie image" src={pieImage}/>
-                                                <span className="ml-6 max-w-[250px] xl:max-w-[270px]">{t('connectInfo.bakeSomeCakes')}</span>
+                                                <span className="ml-6 max-w-[300px] lg:max-w-[250px] xl:max-w-[270px]">{t('connectInfo.bakeSomeCakes')}</span>
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div className="lg:w-[30%] xl:w-2/6 h-full flex flex-col justify-center">
+                        <div className="lg:w-[30%] xl:w-2/6 h-full hidden lg:flex flex-col justify-center">
                             <div className="mt-0 2xl:mt-20">
                                 <Image alt="music image" src={musicImage}/>
                             </div>

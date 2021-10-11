@@ -163,10 +163,10 @@ export default function Result() {
 
     function renderOnMobile() {
         return (
-            <div className="lg:hidden flex flex-col items-center sm:items-start sm:flex-row sm:justify-around text-bvsDrakTeal space-x-3 md:space-x-10 mt-10">
+            <div className="lg:hidden flex flex-col items-center sm:items-start sm:flex-row sm:justify-around text-bvsDrakTeal space-x-0 sm:space-x-5 md:space-x-10 mt-10">
                 <div className="flex-1">
                     <div className="flex justify-center sm:justify-end">
-                        <p className="max-w-[200px] text-[24px] font-semibold text-bvsNavy leading-[27px] mb-8 text-right">{t('wellbeingTracker')}</p>
+                        <p className="max-w-[200px] text-[24px] font-semibold text-bvsNavy leading-[27px] mb-8 sm:text-right text-center">{t('wellbeingTracker')}</p>
                     </div>
                     <div className="flex justify-center sm:justify-end mb-3 md:mb-6">
                         <div className="flex flex-col justify-center rounded-[20px] h-[250px] lg:h-auto lg:rounded-none w-[177px] bg-white bg-opacity-40 relative right-0">
@@ -205,7 +205,7 @@ export default function Result() {
                     <div className="hidden sm:flex justify-center sm:justify-end">
                         <div className="flex flex-col items-center mt-12 mr-4">
                             <Link href="/action-plan" passHref>
-                                <button className={"bg-bvsPeach rounded-[15px] text-base font-medium text-white mb-2 " + (isVietNamese() ? "w-[200px] h-[40px]" : "w-[144px] h-[35px]")}>
+                                <button className={"bg-bvsPeach rounded-[15px] text-base font-medium text-white mb-2 " + (isVietNamese() ? "w-[210px] h-[40px]" : "w-[144px] h-[35px]")}>
                                     <a>{t('actionPlanButotn').toLocaleUpperCase()}</a>
                                 </button>
                             </Link>
@@ -214,7 +214,7 @@ export default function Result() {
                         </div>
                     </div>
                 </div>
-                <div className="flex-1 flex flex-col items-center" >
+                <div className="flex-1 flex flex-col items-center sm:items-start m-0" >
                     <div className="flex flex-col justify-center rounded-[20px] h-[250px] lg:h-auto lg:rounded-none  w-[177px] bg-white bg-opacity-40 mb-3 md:mb-6">
                         <div className="w-full">
                             <div className="mb-[15px] w-full lg:max-w-180px">
@@ -292,7 +292,7 @@ export default function Result() {
                         <p className="hidden lg:block text-[24px] font-semibold text-bvsNavy leading-[27px] mb-10 2xl:mb-20 text-center">{t('overallWellbeing')}</p>
                        <div className="flex flex-col items-center">
                            <div className="flex">
-                               <div className="text-base font-normal text-bvsDrakTeal leading-[16px] relative -left-4 top-[40px] md:-left-10 md:top-[50px] lg:-left-3 lg:top-[44px] xl:-left-10">
+                               <div className="text-[13px] sm:text-base font-normal text-bvsDrakTeal leading-3 sm:leading-[16px] relative -left-3 top-[31px] sm:-left-4 sm:top-[40px] md:-left-10 md:top-[50px] lg:-left-3 lg:top-[44px] xl:-left-10">
                                     <p
                                         className={"mb-[14px] xl:mb-[29px] flex justify-end text-right "
                                         + (i18n.language === 'vi-VN' ? "max-w-[150px] sm:max-w-[180px] " : "max-w-[130px] ") + (totalScore <= 60 && totalScore > 45 ? "text-bvsPeach font-semibold" : "")}
@@ -311,7 +311,7 @@ export default function Result() {
                                          }>{t('trySomethingNew')}</p>
                                </div>
                                <div>
-                                 <div className="w-[160px] sm:w-[205px] lg:w-[180px] xl:w-[205px]">
+                                 <div className={"w-[150px] sm:w-[205px] lg:w-[180px] xl:w-[205px] "}>
                                    <Image alt="image" src={renderThermometerMain()}/>
                                 </div>
                                </div>

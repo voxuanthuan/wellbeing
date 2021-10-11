@@ -104,7 +104,7 @@ export default function ActionPlan() {
                     <div className="h-full flex">
                         <div className="w-1/3 h-full flex justify-center items-center">
                             <div className="w-full">
-                                <div className=" mt-10 ml-10 2xl:mt-40 relative">
+                                <div className="ml-6 mt-12 lg:mt-10 lg:ml-10 2xl:mt-40 relative">
                                     <div className="absolute -top:3 -left-3 xl:-top-4 xl:-left-4 w-[42px] h-[31px] 2xl:w-[81px] 2xl:h-[71px]">
                                         <Image alt="quote image" src={quoteIcon} />
                                     </div>
@@ -115,12 +115,12 @@ export default function ActionPlan() {
                                     <p className="w-full text-[#1E96A5] text-[20px] 2xl:text-[24px] font-semibold  max-w-[80%] xl:max-w-[327px] leading-7 relative z-10">{t('importantThing')}</p>
                                 </div>
                                 <Link href="/result" passHref>
-                                        <button className="w-full hover:scale-105 hover:opacity-40 text-black text-opacity-60 mt-14 xl:mt-20">
+                                        <button className="w-full hover:opacity-40 text-black text-opacity-60 mt-14 xl:mt-20">
                                                 <div className="w-full flex items-center justify-center space-x-2">
                                                     <div className="w-[18px] h-[18px] rounded-[14px]">
                                                         <Image alt="arrow back" src={arrowBack}/>
                                                         </div>
-                                                        <p><a>{t('backToReport')}</a></p>
+                                                        <p className="md:max-w-[210px] lg:max-w-[100%]"><a>{t('backToReport')}</a></p>
                                                 </div>
                                         </button>
                                 </Link>
