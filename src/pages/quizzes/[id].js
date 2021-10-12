@@ -198,11 +198,11 @@ export default function Quizzes() {
                                                             <th colSpan="5" className={"pl-1 text-left " + classStr(question.id + 1)}>{t(`${question.content}`)}</th>
                                                         </tr>
                                                         <tr>
-                                                            <th className={"p-3 font-normal text-[10px]" + classStr(question.id + 1)}>{t('never')}</th>
-                                                            <th className={"p-3 font-normal text-[10px]" + classStr(question.id + 1)}>{t('onceAMonth')}</th>
-                                                            <th className={"p-3 font-normal text-[10px]" + classStr(question.id + 1)}>{t('onceAWeek')}</th>
-                                                            <th className={"p-3 font-normal text-[10px]" + classStr(question.id + 1)}>{t('mostDays')}</th>
-                                                            <th className={"p-3 font-normal text-[10px]" + classStr(question.id + 1)}>{t('everyDay')}</th>
+                                                            <th className={"p-2 font-normal text-[10px]" + classStr(question.id + 1)}>{t('never')}</th>
+                                                            <th className={"p-2 font-normal text-[10px]" + classStr(question.id + 1)}>{t('onceAMonth')}</th>
+                                                            <th className={"p-2 font-normal text-[10px]" + classStr(question.id + 1)}>{t('onceAWeek')}</th>
+                                                            <th className={"p-2 font-normal text-[10px]" + classStr(question.id + 1)}>{t('mostDays')}</th>
+                                                            <th className={"p-2 font-normal text-[10px]" + classStr(question.id + 1)}>{t('everyDay')}</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody className="font-semibold">
