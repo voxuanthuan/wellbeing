@@ -135,7 +135,7 @@ export default function ActionPlan() {
                                     <h1 className="text-bvsPeach font-bold text-[20px] md:text-[24px] 2xl:text-[36px] mb-[15px] 2xl:mb-[81px] text-center sm:text-left" dangerouslySetInnerHTML={{__html: t('wellbeingActionPlan').toLocaleUpperCase()}}></h1>
                                         <div>
                                             <div className="block mb-0 sm:flex sm:mb-[44px] 2xl:mb-[70px] justify-around xl:justify-start">
-                                                <div className="max-w-[360px] h-[110px] relative mb-4 sm:mb-0">
+                                                <div className="max-w-[360px] h-auto sm:h-[110px] relative mb-8 sm:mb-0">
                                                     <div className="flex">
                                                         <div className="hidden xl:block w-[55px] h-[55px] mt-1">
                                                             <Image alt="connect icon" src={connectIconSmall}/>
@@ -152,7 +152,7 @@ export default function ActionPlan() {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="max-w-[360px] ml-0 xl:ml-20 h-[110px] relative mb-4 sm:mb-0">
+                                                <div className="max-w-[360px] ml-0 xl:ml-20 h-auto sm:h-[110px] relative mb-8 sm:mb-0">
                                                     <div className="flex">
                                                         <div className="hidden xl:block w-[55px] h-[55px] mt-1">
                                                             <Image alt="beactive icon" src={beActiveIconSmall}/>
@@ -173,7 +173,7 @@ export default function ActionPlan() {
                                                 
                                             </div>
                                             <div className="block sm:flex sm:mb-[50px] 2xl:mb-20 justify-around xl:justify-start">
-                                                <div className="max-w-[360px] h-[110px] relative mb-4 sm:mb-0">
+                                                <div className="max-w-[360px] h-auto sm:h-[110px] relative mb-8 sm:mb-0">
                                                     <div className="flex">
                                                         <div className="hidden xl:block w-[55px] h-[55px] mt-1">
                                                                 <Image alt="keep learning icon" src={keepLearningIconSmall}/>
@@ -189,7 +189,7 @@ export default function ActionPlan() {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="max-w-[360px] ml-0 xl:ml-20 h-[110px] relative mb-4 sm:mb-0">
+                                                <div className="max-w-[360px] ml-0 xl:ml-20 h-auto sm:h-[110px] relative mb-8 sm:mb-0">
                                                     <div className="flex">
                                                         <div className="hidden xl:block w-[55px] h-[55px] mt-1">
                                                             <Image alt="give icon" src={giveIconSmall}/>
@@ -210,7 +210,7 @@ export default function ActionPlan() {
                                                 
                                             </div>
                                             <div className="flex">
-                                                <div className="max-w-[360px] h-[110px] relative flex-1">
+                                                <div className="max-w-[360px] h-auto sm:h-[110px] relative flex-1">
                                                     <div className="flex">
                                                             <div className="hidden xl:block w-[55px] h-[55px] mt-1">
                                                                     <Image alt="take notice icon" src={takeNoticeIconSmall}/>
@@ -226,7 +226,7 @@ export default function ActionPlan() {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="w-auto xl:min-w-[350px] h-[110px] relative flex-1 hidden sm:flex justify-center items-end">
+                                                <div className="w-auto xl:min-w-[350px] h-auto sm:h-[110px] relative flex-1 hidden sm:flex justify-center items-end">
                                                     <div className=" flex items-center flex-col">
                                                         <div>
                                                             <Image alt="arrow-down-button" src={arrowButtonDown}/>
