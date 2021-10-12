@@ -27,7 +27,7 @@ export default function Connect() {
                     <div className="w-full mx-auto  text-center">
                         <p className="font-semibold text-[18px] sm:text-[24px] mx-auto w-auto lg:w-[740px] text-bvsNavy pt-5">{t('helpTitle')}</p>
                         </div>
-                        <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-around mt-10 2xl:mt-20 w-full lg:w-[900px] mx-auto space-x-0 lg:space-x-12">
+                        <div className="flex flex-col items-center lg:items-start justify-center lg:flex-row lg:justify-around mt-10 2xl:mt-20 w-full lg:w-[900px] mx-auto space-x-0 lg:space-x-12">
                             <div className="flex flex-row lg:flex-col items-center sm:w-[400px] md:min-w-[500px] lg:min-w-0 max-w-[500px] lg:max-w-[204px] mb-6 lg:mb-0">
                                 <div className="hover:scale-110 w-[115px] sm:w-[151px] relative">
                                     <div className="w-full h-full">
@@ -57,8 +57,8 @@ export default function Connect() {
                                     </div>
                                 </div>
                                 <div className="ml-1 sm:ml-5 lg:ml-0 text-center max-w-[190px]">
-                                    <span className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center" dangerouslySetInnerHTML={{__html: t('mrLukeCurran')}} />
-                                    <span className="font-semibold text-[11px] sm:text-sm text-bvsDrakTeal text-center">Luke.Curran@bvisivietnam.com </span>
+                                    <p className="font-semibold text-base text-bvsDrakTeal mt-[21px] text-center" dangerouslySetInnerHTML={{__html: t('mrLukeCurran')}} />
+                                    <p className="font-semibold text-[11px] sm:text-sm text-bvsDrakTeal text-center">Luke.Curran@bvisivietnam.com </p>
                                 </div>
                             </div>
                             <div className="flex flex-row lg:flex-col items-center sm:w-[400px] md:min-w-[500px] lg:min-w-0 max-w-[500px] lg:max-w-[204px] mb-6 lg:mb-0">
