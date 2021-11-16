@@ -15,6 +15,9 @@
     "lint:watchAll": "esw . --watch",
     "circleci:run": "circleci local execute --job $JOB"
   },
+  "jest": {
+    "maxWorkers": "30%"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/voxuanthuan/wellbeing/tree/master"
